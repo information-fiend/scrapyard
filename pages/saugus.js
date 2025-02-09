@@ -78,8 +78,7 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard [EXAMPLECITY]</title>
+        <title>Scrapyard Saugus</title>
       </Head>
       <Flag />
       <Box
@@ -141,7 +140,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build eccentric items, get preposterous prizes.
             </Heading>
           </Box>
           <Box
@@ -174,8 +173,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] - March&nbsp;15-16
+              Saugus - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -225,8 +223,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=saugus"
           target="_blank"
         >
           <Box
@@ -332,26 +329,22 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard [EXAMPLECITY]?
+              What's Scrapyard Saugus?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard [EXAMPLECITY] is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in [EXAMPLECITY], where you can make the stupidest
+              Scrapyard Saugus is a hackathon for high schoolers
+              happening in Saugus, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] needs you and your scrappy ideas!
+              Saugus needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -449,8 +442,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [EXAMPLECITY]?
+            WHAT'S HAPPENING AT SCRAPYARD SAUGUS?
           </Heading>
         </Box>
         <Heading
@@ -462,9 +454,8 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard [EXAMPLECITY] is a [DURATION] event - HERE'S THE ROUGH
+          Scrapyard Saugus is a [DURATION] event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -556,8 +547,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO [EXAMPLECITY]?
+            CAN'T MAKE IT TO Saugus?
           </Heading>
         </Box>
         <Heading
@@ -703,8 +693,7 @@ export default function ExampleCity() {
             ),
             'What if I have more questions?': (
               <>
-                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the [SLACKCHANNEL]
+                Contact us! Feel free to reach out to us in the #scrapyard-saugus
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:scrapyard@hackclub.com">
@@ -761,8 +750,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=saugus"
           target="_blank"
         >
           <Box
@@ -791,8 +779,7 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [EXAMPLECITY]
+              SIGN UP FOR SCRAPYARD SAUGUS
             </Heading>
           </Box>
         </Link>
