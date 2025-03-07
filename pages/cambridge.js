@@ -153,7 +153,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Raspberry Pi, Cambridge - March&nbsp;15-16
+              Raspberry Pi, Cambridge - March&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -669,7 +669,14 @@ export default function ExampleCity() {
                   {/* TODO: Change this email to your event's email */}
                   cambridge@scrapyard.hackclub.com
                 </Link>{' '}
-                for questions.
+                for questions. Our adult volunteers are DBS checked and 
+                have completed Safeguarding training.
+                For more information, check out Raspberry Pi's{' '}
+                {}
+                <Link href="https://www.raspberrypi.org/safeguarding/">
+                  {}
+                  safeguarding page
+                </Link>.
               </>
             ),
             'What if I have more questions?': (
