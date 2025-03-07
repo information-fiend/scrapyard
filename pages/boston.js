@@ -165,7 +165,7 @@ export default function ExampleCity() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.1em', '1.3em']
               }}
             >
               BOSTON - March&nbsp;15, {" "}
