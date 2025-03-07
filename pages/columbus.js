@@ -554,150 +554,156 @@ export default function Columbus() {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: ['90%', '70%'],
-            fontSize: '2em',
-            gap: '0.2em',
+            flexDirection: ['column', 'column', 'row'],
+            alignItems: ['center', 'center', 'flex-start'],
+            justifyContent: 'center',
+            gap: 4,
+            width: '100%',
+            fontSize: ['1.5em', '1.5em', '1.2em'],
             color: 'black',
-            my: 5,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: ['contain', 'contain', 'cover!important'],
-            p: 4,
-            borderRadius: 1,
-            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+            my: 5
           }}
         >
-          <Heading
-            as="h2"
+          <Box
             sx={{
-              fontSize: '1.5em',
-              fontFamily: 'moonblossom',
-              color: 'black',
-              textAlign: 'center',
-              paddingBottom: 50
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: ['90%', '70%', '45%'],
+              background: "url('/backgrounds/lined-paper.png')",
+              backgroundSize: ['contain', 'contain', 'cover!important'],
+              p: 4,
+              borderRadius: 1,
+              boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
             }}
           >
-            Day 1 (SATURDAY)
-          </Heading>
-
-          {schedule.map((item, i) => (
-            <div
-              style={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                marginBottom: '2.5rem'
+            <Heading
+              as="h2"
+              sx={{
+                fontSize: '1.5em',
+                fontFamily: 'moonblossom',
+                color: 'black',
+                textAlign: 'center',
+                paddingBottom: 50
               }}
-              key={i}
             >
-              <Heading
-                as="p"
-                sx={{
-                  display: 'inline',
-                  width: ['min-content', 'max-content'],
-                  fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+              Day 1 (SATURDAY)
+            </Heading>
+
+            {schedule.map((item, i) => (
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  alignItems: 'center',
+                  marginBottom: '1.5rem'
                 }}
+                key={i}
               >
-                {item.event}
-              </Heading>
-              <Box
-                sx={{
-                  mx: 2,
-                  transform: 'translateY(0.75rem)',
-                  borderWidth: 0,
-                  borderBottomWidth: '0.35rem',
-                  borderStyle: 'dotted',
-                  flexGrow: '1',
-                  display: 'inline',
-                  height: 1
-                }}
-              ></Box>
-              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
-            </div>
-          ))}
+                <Heading
+                  as="p"
+                  sx={{
+                    display: 'inline',
+                    width: ['min-content', 'max-content'],
+                    fontSize: '2rem',
+                    fontFamily: 'p22-stanyan'
+                  }}
+                >
+                  {item.event}
+                </Heading>
+                <Box
+                  sx={{
+                    mx: 2,
+                    transform: 'translateY(0.75rem)',
+                    borderWidth: 0,
+                    borderBottomWidth: '0.35rem',
+                    borderStyle: 'dotted',
+                    flexGrow: '1',
+                    display: 'inline',
+                    height: 1
+                  }}
+                ></Box>
+                <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+              </div>
+            ))}
 
-          <Heading
-            as="h2"
-            sx={{
-              fontSize: '0.8em',
-              fontFamily: 'moonblossom',
-              color: 'black',
-              textAlign: 'left',
-              paddingTop: 20
-            }}
-          >
-            *Optional event
-          </Heading>
-        </Box>
-
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: ['90%', '70%'],
-            fontSize: '2em',
-            gap: '0.2em',
-            color: 'black',
-            my: 5,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: ['contain', 'contain', 'cover!important'],
-            p: 4,
-            borderRadius: 1,
-            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
-          }}
-        >
-          <Heading
-            as="h2"
-            sx={{
-              fontSize: '1.5em',
-              fontFamily: 'moonblossom',
-              color: 'black',
-              textAlign: 'center',
-              paddingBottom: 50
-            }}
-          >
-            Day 2 (SUNDAY)
-          </Heading>
-
-          {scheduleday2.map((item, i) => (
-            <div
-              style={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                marginBottom: '2.5rem'
+            <Heading
+              as="h2"
+              sx={{
+                fontSize: '0.8em',
+                fontFamily: 'moonblossom',
+                color: 'black',
+                textAlign: 'left',
+                paddingTop: 20
               }}
-              key={i}
             >
-              <Heading
-                as="p"
-                sx={{
-                  display: 'inline',
-                  width: ['min-content', 'max-content'],
-                  fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+              *Optional event
+            </Heading>
+          </Box>
+
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: ['90%', '70%', '45%'],
+              background: "url('/backgrounds/lined-paper.png')",
+              backgroundSize: ['contain', 'contain', 'cover!important'],
+              p: 4,
+              borderRadius: 1,
+              boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontSize: '1.5em',
+                fontFamily: 'moonblossom',
+                color: 'black',
+                textAlign: 'center',
+                paddingBottom: 50
+              }}
+            >
+              Day 2 (SUNDAY)
+            </Heading>
+
+            {scheduleday2.map((item, i) => (
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  alignItems: 'center',
+                  marginBottom: '1.5rem'
                 }}
+                key={i}
               >
-                {item.event}
-              </Heading>
-              <Box
-                sx={{
-                  mx: 2,
-                  transform: 'translateY(0.75rem)',
-                  borderWidth: 0,
-                  borderBottomWidth: '0.35rem',
-                  borderStyle: 'dotted',
-                  flexGrow: '1',
-                  display: 'inline',
-                  height: 1
-                }}
-              ></Box>
-              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
-            </div>
-          ))}
+                <Heading
+                  as="p"
+                  sx={{
+                    display: 'inline',
+                    width: ['min-content', 'max-content'],
+                    fontSize: '2rem',
+                    fontFamily: 'p22-stanyan'
+                  }}
+                >
+                  {item.event}
+                </Heading>
+                <Box
+                  sx={{
+                    mx: 2,
+                    transform: 'translateY(0.75rem)',
+                    borderWidth: 0,
+                    borderBottomWidth: '0.35rem',
+                    borderStyle: 'dotted',
+                    flexGrow: '1',
+                    display: 'inline',
+                    height: 1
+                  }}
+                ></Box>
+                <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+              </div>
+            ))}
+          </Box>
         </Box>
       </Box>
 
