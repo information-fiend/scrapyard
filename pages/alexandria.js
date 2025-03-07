@@ -29,6 +29,7 @@ const schedule1 = [
     { time: '10:30 AM', event: 'Doors open' },
     { time: '11:00 AM', event: 'Opening ceremony' },
     { time: '12:00 PM', event: 'Start working on your project!' },
+    { time: '4:00 PM', event: 'Workshops' },
     { time: '6:00 PM', event: 'Iftar' },
     { time: '7:30 PM', event: 'Working on projects' },
     { time: '9:00 PM', event: 'Projects Submission' }
@@ -36,7 +37,6 @@ const schedule1 = [
   const schedule2 = [
     { event: 'Day 2' },
     { time: '2:30 PM', event: 'Doors open' },
-    { time: '11:00 AM', event: 'Tech Talks' },
     { time: '3:00 PM', event: 'Project Showcase' },
     { time: '6:00 PM', event: 'Iftar' },
     { time: '7:00 PM', event: 'Judging & Closing ceremony' }
