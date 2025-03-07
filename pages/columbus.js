@@ -14,10 +14,10 @@ const schedule = [
   { time: '11:30 PM', event: 'TEAM FORMATION' },
   { time: '12:15 PM', event: 'STARTER WORKSHOP*' },
   { time: '12:15 PM', event: 'HACKING STARTS' },
-  { time: '12:15 PM', event: 'STARTER WORKSHOP*' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'STARTER WORKSHOP CONTINUES*' },
   { time: '3:00 PM', event: 'CYBERSECURITY WORKSHOP*' },
+  { time: '3:30 PM', event: 'DATA SCIENCE WORKSHOP*' },
   { time: '4:00 PM', event: 'SURPRISE EVENT & SNACKS' },
   { time: '6:00 PM', event: 'CLOSING FOR THE DAY' }
 ]
