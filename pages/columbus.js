@@ -23,8 +23,8 @@ const schedule = [
 ]
 
 const scheduleday2 = [
-  { time: '11:00 AM', event: 'DOORS OPEN/BREAKFAST' },
-  { time: '11:30 AM', event: 'FINAL HACKING BLOCK' },
+  { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
+  { time: '10:30 AM', event: 'FINAL HACKING BLOCK' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'PROJECT DUE & HACKING ENDS' },
   { time: '2:15 PM', event: 'PROJECT EXPO AND VOTING' },
@@ -673,7 +673,7 @@ export default function Columbus() {
                   display: 'flex',
                   width: '100%',
                   alignItems: 'center',
-                  marginBottom: '1.5rem'
+                  marginBottom: '2rem'
                 }}
                 key={i}
               >
