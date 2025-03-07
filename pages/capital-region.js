@@ -169,7 +169,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Capital Region NY - March&nbsp;15-16
+              Capital Region NY | Tech Valley Center of Gravity | March&nbsp;16
             </Heading>
           </Box>
         </Box>
@@ -346,6 +346,7 @@ export default function ExampleCity() {
               goes at Scrapyard. No matter your experience, Scrapyard
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Capital Region needs you and your scrappy ideas!
+              <br><br>Location: Tech Valley Center of Gravity<br>30 3rd St, Troy NY 12180
             </p>
           </Box>
         </Box>
