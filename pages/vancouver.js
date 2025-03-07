@@ -103,7 +103,7 @@ export default function Vancouver() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/city/vancouver/scrapyardvancouver.png"
             alt="Scrapyard"
           />
         </Box>
@@ -397,23 +397,133 @@ export default function Vancouver() {
 
       <Box
         sx={{
-          width: '100vw',
-          background: "url('/backgrounds/ripped-paper-bottom.png')",
-          backgroundSize: 'cover',
-
-          display: 'flex',
-          justifyContent: 'center',
+          width: '100%',
           alignItems: 'center',
+          display: 'flex',
           flexDirection: 'column',
-
-          height: '17.03212647vw',
-          position: 'relative'
+          mb: 6
         }}
-      ></Box>
+      >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            What is a Hackathon?
+          </Heading>
+        </Box>
+        <Box
+          sx={{
+            maxWidth: '800px',
+            background: 'rgba(255, 255, 255, 0.1)',
+            padding: '30px',
+            borderRadius: '10px',
+            border: '4px solid white',
+            mx: 4,
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
+          }}
+        >
+          <Text
+            sx={{
+              color: 'white',
+              fontSize: '1.5em',
+              fontFamily: 'p22-stanyan',
+              textAlign: 'center',
+              lineHeight: 1.6
+            }}
+          >
+            A hackathon is an event where people come together to collaborate & work on tech projects. 
+            A panel of judges will pick the winning teams & hand out prizes. However, the point of the hackathon 
+            itself is to work together, learn new things & have an amazing time doing so!
+          </Text>
+        </Box>
+      </Box>
 
       <Box
         sx={{
+          width: '100%',
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          mb: 6,
+          mt: 4
+        }}
+      >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            Sponsors
+          </Heading>
+        </Box>
+        <Box
+          sx={{
+            backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+            filter: 'drop-shadow(5px 5px 5px #000)',
+            padding: '15px',
+            width: 'auto',
+            minWidth: '200px',
+            transition: 'transform 0.2s',
+            ':hover': {
+              transform: 'scale(1.1)'
+            }
+          }}
+        >
+          <Heading
+            as="h2"
+            sx={{
+              fontFamily: '22-stanyan',
+              textAlign: 'center',
+              fontSize: ['1.2em', '1.4em'],
+              textTransform: 'inherit!important',
+              padding: '8px 24px'
+            }}
+          >
+            Coming Soon!
+          </Heading>
+        </Box>
+      </Box>
 
+      <Box
+        sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column'
@@ -422,7 +532,7 @@ export default function Vancouver() {
         <Heading
           as="h2"
           sx={{
-            fontSize: '3em',  
+            fontSize: '3em',
             fontFamily: 'moonblossom',
             fontWeight: 'bold',
             color: 'white',
@@ -759,21 +869,9 @@ export default function Vancouver() {
                 to come!
               </>
             ),
-            'What is a hackathon?': (
-              <>
-                A hackathon is an event where people come together to collaborate & work on tech projects. 
-                A panel of judges will pick the winning teams & hand out prizes. However, the point of the hackathon 
-                itself is to work together, learn new things & have an amazing time doing so!
-              </>
-            ),
-            'What about the food?': (
-              <>
-                The hackathon will include 2 free meals! As well as tons of snacks :)
-              </>
-            ),
             'All this, for free?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
+                Yep! 2 meals, tons of snacks, swag and good vibes are all included! Plus, if you’re
                 joining us from afar,{' '}
                 <Link href="https://gas.hackclub.com/">
                   we’ll cover the cost of gas or a bus / train ticket
@@ -1006,14 +1104,14 @@ export default function Vancouver() {
         </Box>
         <Text
           sx={{
-            fontFamily: 'moonblossom',
+            fontFamily: 'p22-stanyan',
             textAlign: 'center',
             fontSize: '1.5em',
             maxWidth: '800px',
             color: 'white'
           }}
         >
-          Scrapyard Vancouver is organized by BCYDC. We are a collective of over 300 high school students with a shared passion for computer science, software development, robotics, and technology.
+          Scrapyard Vancouver is being organized by BCYDC. We are a collective of over 300 high school students with a shared passion for computer science, software development, robotics, and technology.
         </Text>
         <Box
           sx={{
