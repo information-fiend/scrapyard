@@ -109,7 +109,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/city/alexandria/logo.png"
+            src="/city/alexandria/alexandria.png"
             alt="Scrapyard"
           />
         </Box>
@@ -343,7 +343,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Alexandria is a hackathon for high schoolers
+              Scrapyard Alexandria is a hackathon for high schoolers{' '}
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               happening in Alexandria , where you can make the stupidest
               things you can think of! Anything, from a{' '}
@@ -667,7 +667,7 @@ export default function ExampleCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
+                All high-school & grade 9 students are welcome
                 to come! You don't have to be a member of the Hack Club
                 community or be a Hack Club leader.
               </>
