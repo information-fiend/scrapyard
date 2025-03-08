@@ -351,9 +351,7 @@ export default function ExampleCity() {
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Alexandria needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Alexandria needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -606,7 +604,9 @@ export default function ExampleCity() {
             textAlign: 'center',
             mx: '5vw'
           }}
-        >
+          >
+          The Address : 1 Mahmoud Salamah , Kom Ad Dakah Gharb, Al Attarin , Alexandria Governorate 5370051 
+          <span style={{ display: "block", marginTop: "15px" }}></span>
           THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
         </Heading>
         <Box
