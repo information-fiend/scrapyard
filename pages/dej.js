@@ -22,22 +22,18 @@ Note: To test your changes locally, use `yarn install` and `yarn dev`.
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
+import styles from './dej.module.css'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '09:00', event: 'Se deschid ușile' },
+  { time: '10:00', event: 'Ceremonia de deschidere' },
+  { time: '13:00', event: 'Prânzul' },
+  { time: '14:00', event: 'Workshop 1' },
+  { time: '15:00', event: 'Workshop 2' },
+  { time: '16:00', event: 'Activitate surpriză' },
+  { time: '19:00', event: 'Cina' },
+  { time: '22:00', event: 'Ceremonia de încheiere' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -67,6 +63,7 @@ const Flag = () => (
 export default function ExampleCity() {
   return (
     <Box
+      className={styles.clujNapoca}
       sx={{
         background:
           "url('/backgrounds/cutting-mat.png'), linear-gradient(#337D78, #337D78)",
@@ -78,8 +75,8 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change Vidisha to your event's city */}
-        <title>Scrapyard Vidisha</title>
+        {/* TODO: Change [EXAMPLECITY] to your event's city */}
+        <title>Scrapyard Dej</title>
       </Head>
       <Flag />
       <Box
@@ -107,8 +104,8 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/city/vidisha/vidisha.svg"
-            alt="Scrapyard_vidisha_logo"
+            src="/city/dej/logo.png"
+            alt="Scrapyard Dej"
           />
         </Box>
         <Box
@@ -136,12 +133,12 @@ export default function ExampleCity() {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'moonblossom',
+                fontFamily: 'Phantom Sans',
                 textAlign: 'center',
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Construiește proiecte inovative, câștigă premii pe măsură
             </Heading>
           </Box>
           <Box
@@ -165,7 +162,6 @@ export default function ExampleCity() {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'p22-stanyan',
                 mx: '8%',
                 p: 0,
                 wordBreak: 'keep-all',
@@ -174,8 +170,8 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change Vidisha to your event's city */}
-              Vidisha - March&nbsp;15-16
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Dej - Martie&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -225,7 +221,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=vidisha"
+          href="https://forms.hackclub.com/scrapyard-signup?event=dej"
           target="_blank"
         >
           <Box
@@ -242,14 +238,14 @@ export default function ExampleCity() {
                 transform: 'scale(1.1)'
               },
               zIndex: 30,
-              minWidth: '8em',
+              minWidth: '12em',
               padding: '15px'
             }}
           >
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'moonblossom',
+                fontFamily: 'Phantom Sans',
                 textAlign: 'center',
                 padding: ['2%', '8%'],
                 fontSize: ['1.2em', '1.4em'],
@@ -257,7 +253,7 @@ export default function ExampleCity() {
                 width: '100%'
               }}
             >
-              SIGN&nbsp;UP
+              Înscrie-te!
             </Heading>
           </Box>
         </Link>
@@ -328,29 +324,30 @@ export default function ExampleCity() {
           >
             <Heading
               sx={{
-                textDecoration: 'underline'
+                textDecoration: 'underline',
+                fontFamily: 'Phantom Sans'
               }}
             >
-              {/* TODO: Change Vidisha to your event's city */}
-              What's Scrapyard Vidisha?
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Ce înseamnă Scrapyard Dej?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change Vidisha to your event's city */}
-              Scrapyard Vidisha is a hackathon for high schoolers
-              {/* TODO: Change Vidisha to your event's city */}
-              happening in Vidisha, where you can make the stupidest things you
-              can think of! Anything, from a{' '}
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Scrapyard Dej este un hackathon pentru elevii de liceu
+              care va avea loc în Dej la <a href='https://maps.app.goo.gl/tstxJ3fwrQptRYt99'>Colegiul Național Andrei Mureșanu</a>, unde vei crea cele mai inovative
+              proiecte alături de alți elevi și mentori! Poți crea orice, chiar
+              și{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
-                lamp that flashes faster the slower you type
+                o lampă care pâlpâie din ce în ce mai încet pe parcurs ce scrii
+                cod
               </Link>
-              , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change Vidisha to your event's city */}
-              Vidisha needs you and your scrappy ideas!
+              , sau idei pe care nu le consideri a fi neapărat utile, dar sunt
+              ingenioase. Indiferent de nivelul tău de experiență, Scrapyard
+              Dej are nevoie de tine și de ideile tale nebunești!
             </p>
           </Box>
         </Box>
@@ -448,22 +445,23 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change Vidisha to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD VIDISHA?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            CE SE VA ÎNTÂMPLA LA SCRAPYARD DEJ?
           </Heading>
         </Box>
         <Heading
           as="h2"
           sx={{
             fontSize: '1.5em',
-            fontFamily: 'moonblossom',
+            fontFamily: 'Phantom Sans',
             color: 'white',
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change Vidisha to your event's city */}
+          {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Vidisha is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Dej este un eveniment de 12 de ore - Aici este
+          orarul estimativ!
         </Heading>
         <Box
           sx={{
@@ -497,7 +495,7 @@ export default function ExampleCity() {
                   display: 'inline',
                   width: ['min-content', 'max-content'],
                   fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+                  fontFamily: 'Phantom Sans'
                 }}
               >
                 {item.event}
@@ -554,21 +552,21 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change Vidisha to your event's city */}
-            CAN'T MAKE IT TO VIDISHA?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            Nu vei putea ajunge la Dej?
           </Heading>
         </Box>
         <Heading
           as="h2"
           sx={{
             fontSize: '1.5em',
-            fontFamily: 'moonblossom',
+            fontFamily: 'Phantom Sans',
             color: 'white',
             textAlign: 'center',
             mx: '5vw'
           }}
         >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
+          Există înca peste 100 de locații în toată lumea!
         </Heading>
         <Box
           sx={{
@@ -604,10 +602,11 @@ export default function ExampleCity() {
           as="h1"
           sx={{
             mb: 5,
-            position: 'relative'
+            position: 'relative',
+            fontFamily: 'Phantom Sans'
           }}
         >
-          Frequently Asked Questions
+          Întrebări frecvente
           <Image
             src="/elements/doodles/blue-underline.svg"
             sx={{
@@ -622,88 +621,97 @@ export default function ExampleCity() {
           columns={[1, 1, 1, 2]}
           gap={4}
           sx={{
-            maxWidth: '1200px'
+            maxWidth: '1200px',
+            fontFamily: 'Phantom Sans'
           }}
         >
           {Object.entries({
-            'Who can participate in Scrapyard?': (
+            'Cine poate participa la Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                Toți elevii de liceu sau gimnazială pot participa. Nu trebuie să
+                fi în comunitatea hackclub sau liderul unui club.
               </>
             ),
-            'All this, for free?': (
+            'Este tot gratis?': (
               <>
-                {/* I removed Gas fund as it is not available in India */}
-                Yep! Food, swag and good vibes are all included.
+                Da! Mâncarea, băuturile, premiile și buna dispoziție sunt toate
+                incluse.
+                {/* În plus, dacă vii de mai departe{' '}
+                  <Link href="https://gas.hackclub.com/">
+                    îți asigurăm banii de combustibil sau de bilet de autobuz
+                  </Link>
+                  . */}
               </>
             ),
-            'What do I need?': (
+            'De ce am nevoie?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                De un laptop, încărcătoare și o minte deschisă! Dacă vrei să lucrezi pe un proiect de
+                hardware, adu-ți toate componentele de care ai nevoie.
               </>
             ),
-            'I’m not good at coding. Can I still participate?': (
+            'Pot să particip dacă nu știu să programez?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                Acest hackathon este pentru persoanele creative, indiferent de
+                experiență! Vom avea workshop-uri și pentru începători, deci hai
+                să învățăm împreună. Dacă vrei să explorezi niște proiecte
+                introductive, încearcă un{' '}
+                <Link href="https://jams.hackclub.com">
+                  workshop Hack Club!
+                </Link>
               </>
             ),
-            'What can I make at Scrapyard?': (
+            'Ce pot face la scrapyard?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
-                you out.
+                Orice proiect îți imaginezi -- creativitatea este încurajată. Un
+                joc? Un Website? O aplicație? Un limbaj de programare? Hardware?
+                Orice! Vom avea o mulțime de resurse de învățare și mentori
+                pentru a te ajuta.
               </>
             ),
-            'What has Hack Club done before?': (
+            'Ce a mai facut Hackclub?': (
               <>
-                Hack Club has run an{' '}
+                Hackclub a organizat un{' '}
                 <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
-                  overnight hackathon
+                  hackathon peste noapte
                 </Link>{' '}
-                in San Francisco, a{' '}
+                în San Francisco, un{' '}
                 <Link
                   href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
                   target="_blank"
                 >
                   Game Jam
                 </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
+                în 50 de orașe, un hackathon pe{' '}
                 <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
-                  Train
+                  un Tren
                 </Link>{' '}
-                from Vermont to Los Angeles, and much more!
+                din Vermont până în Los Angeles, și multe altele!
               </>
             ),
-            'What if my parents are concerned?': (
+            'Ce pot să fac dacă parinții nu sunt siguri?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
+                Suntem aici să te ajutăm! Ghidul nostru pentru părinți va fi
+                publicat în curând, dar pot să ne scrie la{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:vidisha@scrapyard.hackclub.com">
+                <Link href="mailto:cosmin@hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  vidisha@scrapyard.hackclub.com
+                  cosmin@hackclub.com
                 </Link>{' '}
-                for questions.
+                pentru întrebări.
               </>
             ),
-            'What if I have more questions?': (
+            'Ce pot face dacă am mai multe întrebări?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the
-                #scrapyard-vidisha channel on the Hack Club slack or email us at{' '}
+                Contactează-ne! poți să ne contactezi pe{' '}
+                <Link href="https://hackclub.slack.com">
+                  slack-ul Hack Club
+                </Link>{' '}
+                în canalul #scrapyard-dej sau pe adresa de email{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:vidisha@scrapyard.hackclub.com">
+                <Link href="mailto:cosmin@hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  vidisha@scrapyard.hackclub.com
+                  cosmin@hackclub.com
                 </Link>
                 .
               </>
@@ -728,7 +736,8 @@ export default function ExampleCity() {
                   as="h2"
                   mb={4}
                   sx={{
-                    position: 'relative'
+                    position: 'relative',
+                    fontFamily: 'Phantom Sans'
                   }}
                 >
                   {question}
@@ -755,7 +764,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=vidisha"
+          href="https://forms.hackclub.com/scrapyard-signup?event=dej"
           target="_blank"
         >
           <Box
@@ -776,7 +785,7 @@ export default function ExampleCity() {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'moonblossom',
+                fontFamily: 'Phantom Sans',
                 textAlign: 'center',
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
@@ -784,8 +793,8 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change Vidisha to your event's city */}
-              SIGN UP FOR SCRAPYARD VIDISHA
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              ÎNSCRIE-TE LA SCRAPYARD DEJ
             </Heading>
           </Box>
         </Link>
@@ -809,16 +818,16 @@ export default function ExampleCity() {
         </Heading>
         <Text
           sx={{
-            fontFamily: 'moonblossom',
+            fontFamily: 'Phantom Sans',
             mb: -2,
             textAlign: 'center'
           }}
         >
-          Made with ♡ by teenagers, for teenagers at Hack Club
+          Creat cu ♡ de elevi, pentru elevi la Hack Club
         </Text>
         <Text
           sx={{
-            fontFamily: 'moonblossom',
+            fontFamily: 'Phantom Sans',
             mt: 0,
             textAlign: 'center'
           }}
@@ -827,9 +836,9 @@ export default function ExampleCity() {
           <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
           <Link href="https://hackclub.com/slack">Slack</Link>{' '}
           <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-          <Link href="https://hackclub.com/clubs">Clubs</Link>{' '}
+          <Link href="https://hackclub.com/clubs">Cluburi</Link>{' '}
           <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-          <Link href="https://hackclub.com/hackathons">Hackathons</Link>
+          <Link href="https://hackclub.com/hackathons">Hackathon-uri</Link>
         </Text>
       </Box>
     </Box>

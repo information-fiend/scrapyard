@@ -25,16 +25,16 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: 'To-be-announce!', event: 'Doors open' },
-  { time: 'To-be-announce!', event: 'Opening ceremony' },
-  { time: 'To-be-announce!', event: 'Workshop 1' },
-  { time: 'To-be-announce!', event: 'Activity 1' },
-  { time: 'To-be-announce!', event: 'Workshop 2' },
-  { time: 'To-be-announce!', event: 'Activity 2' },
-  { time: 'To-be-announce!', event: 'Team Formation' },
-  { time: 'To-be-announce!', event: 'Make Extraordinary Projects & Win Prizes and Certificates' },
-  { time: 'To-be-announce!', event: 'Announcement of Winners' },
-  { time: 'To-be-announce!', event: 'Closing ceremony' }
+  { time: '08:00 AM', event: 'Doors open' },
+  { time: '09:00 AM', event: 'Opening ceremony' },
+  { time: '09:35 AM', event: 'Workshop 1' },
+  { time: '11:30 AM', event: 'Workshop 2' },
+  { time: '01:50 PM', event: 'Workshop 3' },
+  { time: '03:25 PM', event: 'Team Formation' },
+  { time: '03:40 PM', event: 'Workshop 4' },
+  { time: '05:30 PM', event: 'Make Extraordinary Projects & Win Prizes and Certificates' },
+  { time: '07:45 PM', event: 'Announcement of Winners' },
+  { time: '07:55 PM', event: 'Closing ceremony' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -104,7 +104,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="\city\manila\scrapyard-mla.png"
             alt="Scrapyard"
           />
         </Box>
@@ -138,7 +138,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -172,7 +172,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Metro Manila - March&nbsp;15,2025
+              The Globe Tower, BGC - March&nbsp;15,2025
             </Heading>
           </Box>
         </Box>
@@ -313,7 +313,7 @@ export default function ExampleCity() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="\city\manila\scrapyard-grp-pic.png" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -527,6 +527,8 @@ export default function ExampleCity() {
           flexDirection: 'column'
         }}
       >
+
+        {/* SPONSOR SECTION */}
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
