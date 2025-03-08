@@ -168,7 +168,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [Srinagar] - March&nbsp;15-16
+              [Srinagar] - March&nbsp;16
             </Heading>
           </Box>
         </Box>
