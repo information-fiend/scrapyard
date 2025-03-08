@@ -13,13 +13,14 @@ const schedule1 = [
   { time: '9:45 AM', event: 'Breakfast' },
   { time: '10:15 AM', event: 'Workshop 1: AI/ML with Christopher Hazard' },
   { time: '11:30 AM', event: 'Ideation + Snacks' },
-  { time: '12:00 PM', event: 'Workshop 2: Game Development with SoftPro' },
+  { time: '12:00 PM', event: 'Workshop 2: Software Development with SoftPro' },
   { time: '1:10 PM', event: 'Ice Breaker' },
-  { time: '1:30 PM', event: 'Workshop 3: CAD Modeling with Ecovate' },
+  { time: '1:30 PM', event: 'Workshop 3: Introduction to Mechanica with Ecovate' },
   { time: '2:30 PM', event: 'Lunch: Costco Pizza' },
   { time: '3:15 PM', event: 'Hacking begins!' },
   { time: '5:15 PM', event: 'Snacks + Games' },
   { time: '6:00 PM', event: 'Hacking #2' },
+  { time: '8:00 PM', event: 'Day 1 Ends' },
 ]
 
 const schedule2 = [
@@ -33,6 +34,7 @@ const schedule2 = [
   { time: '5:00 PM', event: 'Project Presentations' },
   { time: '6:15 PM', event: 'Ending Speech by Professor Timothy Menzies' },
   { time: '7:00 PM', event: 'Ending Remarks + Award Distribution' },
+  { time: '8:00 PM', event: 'Day 2 Ends' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -62,12 +64,12 @@ const Flag = () => (
 const SponsorshipCarousel = () => {
   return (
     <Slider
-      width="400px" // Increase the width of the slider
+      width="400px" 
       duration={20}
       pauseOnHover={true}
       blurBorders={false}
       blurBorderColor={'#fff'}
-    >
+    > 
   <Slider.Slide>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '300px', height: '150px' }}>
       <img src="city/cary/scrapyard-cary_howso-sponsor.png" alt="any" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
@@ -85,9 +87,43 @@ const SponsorshipCarousel = () => {
       <img src="city/cary/SoftPro_nosubtext.png" alt="any3" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
     </div>
   </Slider.Slide>
+  <Slider.Slide>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '300px', height: '150px' }}>
+      <img src="city/cary/scrapyard_cary-blockchain.png" alt="any3" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </div>
+  </Slider.Slide>
+  <Slider.Slide>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '300px', height: '150px' }}>
+      <img src="city/cary/scrapyard_cary-petronella.png" alt="any3" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </div>
+  </Slider.Slide>
 </Slider>
   )
-}        
+}      
+
+const SponsorshipCarousel1 = () => {
+  return (
+    <Slider
+      width="400px" 
+      duration={10}
+      pauseOnHover={true}
+      blurBorders={false}
+      blurBorderColor={'#fff'}
+    > 
+  <Slider.Slide>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '300px', height: '150px' }}>
+      <img src="city/cary/scrapyard_cary-spiralgraphics.png" alt="any" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </div>
+  </Slider.Slide>
+  
+  <Slider.Slide>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '300px', height: '150px' }}>
+      <img src="city/cary/scrapyard_cary-ecovate.png" alt="any2" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </div>
+  </Slider.Slide>
+</Slider>
+  )
+}
 
 const MentorCards = () => {
   const mentors = [
@@ -95,7 +131,7 @@ const MentorCards = () => {
     { name: "Professor Timothy Menzies", img: "city/cary/scrapyard_cary-professor_tim.jpg", desc: "CS Professor at NCSU" },
     { name: "Beverly Tan", img: "city/cary/scrapyard_cary-beverly.jpeg", desc: "Co-founder of Ecovate 3D" },
     { name: "Doctor Christopher Hazard", img: "city/cary/scrapyard_cary-doctor_hazard.jpeg", desc: "CTO at Howso" },
-    { name: "????", img: "city/cary/scrapyard_cary-blank_profile.jpg", desc: "???? at SoftPro" },
+    { name: "Farzeen Chaudhry", img: "city/cary/scrapyard_cary-blank_profile.jpg", desc: "Software Development Manager at SoftPro" },
   ];
 
   return (
@@ -644,6 +680,36 @@ export default function ExampleCity() {
           </Heading>
         </Box>
       <SponsorshipCarousel />
+      <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            IN-KIND SPONSORS
+          </Heading>
+        </Box>
+        <SponsorshipCarousel1 />
       <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
