@@ -458,71 +458,6 @@ export default function Vancouver() {
 
       <Box
         sx={{
-          width: '100%',
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          mb: 6,
-          mt: 4
-        }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            Sponsors
-          </Heading>
-        </Box>
-        <Box
-          sx={{
-            backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%',
-            filter: 'drop-shadow(5px 5px 5px #000)',
-            padding: '15px',
-            width: 'auto',
-            minWidth: '200px',
-            transition: 'transform 0.2s',
-            ':hover': {
-              transform: 'scale(1.1)'
-            }
-          }}
-        >
-          <Heading
-            as="h2"
-            sx={{
-              fontFamily: '22-stanyan',
-              textAlign: 'center',
-              fontSize: ['1.2em', '1.4em'],
-              textTransform: 'inherit!important',
-              padding: '8px 24px'
-            }}
-          >
-            Coming Soon!
-          </Heading>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
           display: 'flex',
@@ -574,16 +509,19 @@ export default function Vancouver() {
                 color: '#ADD8E6',
                 fontWeight: 'bold',
                 fontSize: '1.8em',
-                mr: 2
+                whiteSpace: 'nowrap',
+                display: 'inline'
               }}
             >
-              VISST
+              VISST -
             </Text>
             <Text
               sx={{
                 color: 'white',
                 fontSize: '1.5em',
-                fontFamily: 'moonblossom'
+                fontFamily: 'moonblossom',
+                display: 'inline',
+                ml: 2
               }}
             >
               1490 W BROADWAY, VANCOUVER
