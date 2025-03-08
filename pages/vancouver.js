@@ -494,6 +494,7 @@ export default function Vancouver() {
             sx={{
               textDecoration: 'none',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               background: 'rgba(255, 255, 255, 0.1)',
               padding: '10px 20px',
@@ -509,19 +510,18 @@ export default function Vancouver() {
                 color: '#ADD8E6',
                 fontWeight: 'bold',
                 fontSize: '1.8em',
-                whiteSpace: 'nowrap',
-                display: 'inline'
+                display: 'block',
+                mb: 1
               }}
             >
-              VISST -
+              VISST
             </Text>
             <Text
               sx={{
                 color: 'white',
                 fontSize: '1.5em',
                 fontFamily: 'moonblossom',
-                display: 'inline',
-                ml: 2
+                display: 'block'
               }}
             >
               1490 W BROADWAY, VANCOUVER
