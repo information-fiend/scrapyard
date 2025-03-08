@@ -179,6 +179,16 @@ export default function ExampleCity() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Hamilton - March&nbsp;15-16
             </Heading>
+            <Text
+              sx={{
+                fontFamily: 'p22-stanyan',
+                fontSize: ['0.8em', '1em'],
+                textAlign: 'center',
+                mt: 1
+              }}
+            >
+              CoMotion On King, 115 King St E, 3rd Floor
+            </Text>
           </Box>
         </Box>
         <Box
