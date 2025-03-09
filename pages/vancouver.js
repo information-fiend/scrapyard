@@ -587,7 +587,7 @@ export default function Vancouver() {
               sx={{
                 color: 'white',
                 fontSize: '1.5em',
-                fontFamily: 'moonblossom',
+                fontFamily: '22-stanyan',
                 textAlign: 'center',
                 lineHeight: 1.4
               }}
