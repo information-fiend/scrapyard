@@ -1,23 +1,3 @@
-'======== READ ME BEFORE EDITING ========'
-/*
-Hello! This is the template for the city pages.
-
-To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
-E.g. if your city is Tampa, rename the copy of this file to tampa.js
-
-Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
-You do not need to use this template exactly, feel free to customize it as much as you see fit.
-
-If you want to include additional assets, please add them under public/city/your-city-name.
-
-Make a PR and we'll review it as soon as we can!
-
-If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
-
-P.S. Feel free to delete this comment block when you're done! 
-
-Note: To test your changes locally, use `npm install` and `npm run dev`.
-*/
 
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
@@ -25,19 +5,17 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '8:00 AM', event: 'Doors open' },
+  { time: '8:30 AM', event: 'Opening ceremony' },
+  { time: '9:00 AM', event: 'Track 1 and 2 => Workshop 1' },
+  { time: '10:00 AM', event: 'Start working on your project!' },
+  { time: '12:00 PM', event: 'Lunch' },
+  { time: '12:15 PM', event: 'Guest Speaker' },
+  { time: '3:00 PM', event: 'Track 1 and 2 => Workshop 2' },
+  { time: '5:00 PM', event: 'Submissions open'},
+  { time: '7:00 PM', event: 'Dinner + Submissions close' },
+  { time: '7:30 PM', event: 'Closing ceremony' },
+  { time: '8:00 PM', event: 'Departure' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -455,7 +433,7 @@ export default function ExampleCity() {
           }}
         >
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Saugus is a [DURATION] event - HERE'S THE ROUGH
+          Scrapyard Saugus is a 12-hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
