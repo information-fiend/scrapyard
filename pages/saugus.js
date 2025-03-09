@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// TODO: Change this schedule to your own!
 const schedule = [
   { time: '8:00 AM', event: 'Doors open' },
   { time: '8:30 AM', event: 'Opening ceremony' },
@@ -662,9 +661,9 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="mailto:saugus.saugus@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                  saugus.saugus@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -674,9 +673,9 @@ export default function ExampleCity() {
                 Contact us! Feel free to reach out to us in the #scrapyard-saugus
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="mailto:saugus.saugus@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                  saugus.saugus@scrapyard.hackclub.com
                 </Link>
                 .
               </>
