@@ -198,8 +198,9 @@ export default function Victoria() {
               <div style={{display: 'flex', gap: "25px"}}>
                 <img src="/city/victoria/viatech_logo.png" alt="VIATEC Logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
                 <img src="/city/victoria/tiny_logo.png" alt="Tiny Logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
-                <img src="/city/victoria/tenfold_logo.webp" alt="VIATEC Logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
-                <img src="/city/victoria/shreena_tutoring_logo.png" alt="Tiny Logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
+                <img src="/city/victoria/tenfold_logo.webp" alt="Tenfold logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
+                <img src="/city/victoria/shreena_tutoring_logo.png" alt="Shreena tutoring logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
+                <img src="/city/victoria/supabase_logo.png" alt="Supabase logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
               </div>
             </Heading>
         </Box>
