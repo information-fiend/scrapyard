@@ -186,16 +186,17 @@ export default function Victoria() {
                 p: 0,
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
-                width: 'max-content',
+                width: '100%',
                 fontSize: ['1.2em', '1.4em'],
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '20px'
               }}
             >
               Powered by VIATEC and Tiny
-              <div style={{display: 'flex', gap: "25px"}}>
+              <div style={{display: 'flex', gap: "25px", flexWrap: "wrap", justifyContent: 'center'}}>
                 <img src="/city/victoria/viatech_logo.png" alt="VIATEC Logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
                 <img src="/city/victoria/tiny_logo.png" alt="Tiny Logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
                 <img src="/city/victoria/tenfold_logo.webp" alt="Tenfold logo" width="85px" style={{ borderRadius: "10px", height: "max-content" }}/>
