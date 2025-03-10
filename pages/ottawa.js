@@ -93,7 +93,7 @@ export default function Ottawa() {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '20px'
+          gap: '0px'
         }}
       >
         <Box
@@ -103,11 +103,13 @@ export default function Ottawa() {
         >
           <Image
             sx={{
-              width: '600px',
+              width: '700px',
 
               maxWidth: '70vw',
 
-              objectFit: 'contain'
+              objectFit: 'contain',
+              boxSizing: 'border-box',
+              borderStartEndRadius: '20px',
             }}
             src="/city/ottawa/ottawa-woodmark.png"
             alt="Scrapyard"
@@ -117,6 +119,7 @@ export default function Ottawa() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
+            
             alignItems: 'center'
           }}
         >
@@ -128,7 +131,7 @@ export default function Ottawa() {
               // padding: "8%",
               // paddingLeft: "7%",
               display: 'block',
-
+              margin: '0',
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
@@ -139,6 +142,7 @@ export default function Ottawa() {
               as="h2"
               sx={{
                 fontFamily: 'moonblossom',
+                fontSize: ['1.2em', '1.4em'],
                 textAlign: 'center',
                 margin: '8%'
               }}
@@ -226,6 +230,84 @@ export default function Ottawa() {
             alt="Pink paper star"
           />
         </Box>
+
+        <Link
+            href="https://forms.hackclub.com/scrapyard-signup?event=ottawa"
+            target="_blank"
+            style={{
+              textDecoration: 'none',
+              pointerEvents: 'auto'
+            }}
+          >
+            <Box
+              sx={{
+                backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+                filter: 'drop-shadow(5px 5px 5px #000)',
+                transition: 'transform 0.2s',
+                ':hover': {
+                  transform: 'scale(1.5)'
+                },
+                transform: 'scale(1.3)',
+                zIndex: 30,
+                minWidth: '8em',
+                padding: '15px',
+                textDecoration: 'none',
+                pointerEvents: 'auto',
+                position: 'relative',
+                top: 0,
+                left: 0
+              }}
+            >
+              <Heading
+                as="h2"
+                sx={{
+                  fontFamily: 'p22-stanyan',
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  fontSize: ['1.4em', '1.6em'],
+                  textTransform: 'inherit!important',
+                  width: '100%',
+                  textDecoration: 'none',
+                  pointerEvents: 'auto'
+                }}
+              >
+                Sign&nbsp;up&nbsp;for&nbsp;Scrapyard
+              </Heading>
+            </Box>
+          </Link>
+          <Box
+          sx={{
+            position: 'absolute',
+            bottom: 0,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 30,
+            color: 'white',
+            transition: 'transform 0.2s',
+            ':hover': {
+              transform: 'scale(1.2)',
+              transform: 'translateX(-50%) scale(1.2)'
+            },
+          }}
+        >
+          <h1
+            style={{
+              fontSize: '70px',
+              fontFamily: 'p22-stanyan',
+              color: '#ffffffdd',
+              cursor: 'pointer'
+            }}
+            onClick={() => {
+              document
+                .getElementById('about')
+                .scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+          ⬇︎
+          </h1>
+        </Box>
         <Link
           // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
           href="https://forms.hackclub.com/scrapyard-signup?event=ottawa"
@@ -307,6 +389,7 @@ export default function Ottawa() {
           px: 4,
           position: 'relative'
         }}
+        id='about'
       >
         <Box
           sx={{
@@ -323,7 +406,7 @@ export default function Ottawa() {
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
               padding: '40px',
-              zIndex: 1,
+              zIndex: 20,
               backgroundImage: 'url(/elements/sticky-note.svg)',
               backgroundSize: 'cover',
               filter: 'drop-shadow(5px 5px 5px #000000AA)'
@@ -523,15 +606,15 @@ export default function Ottawa() {
         </Box>
 
 {/* Venue Information Section */}
-<Box
+<Box          
   sx={{
-    background: "white",
+background: "white",
     padding: '30px',
     borderRadius: '10px',
     boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+justifyContent: 'center',
     alignItems: 'center',
     width: '80%',
     maxWidth: '1000px',
@@ -539,6 +622,21 @@ export default function Ottawa() {
     marginTop: '50px'
   }}
 >
+<Box
+          sx={{
+            position: 'absolute',
+            width: '80%',
+            height: "auto",
+            maxWidth: '1000px',
+            zIndex: 1,
+            display: ['none', 'none', 'block']
+          }}
+        >
+          <Image
+            src="/elements/thumbtack.png"
+            sx={{ position: "relative", left: '5%', top: '100%', width: '10%' }}
+          />
+  </Box>
 <Heading
             as="h1"
             sx={{
@@ -551,19 +649,76 @@ export default function Ottawa() {
           >
             Where is Scrapyard Ottawa?
           </Heading>
-  <Heading as="h2">
+  <Heading as="h2" sx={{textAlign: 'center'}}>
     The event will be held at <strong>Nokia</strong>!
   </Heading>
-  <Heading as="h3" sx={{ marginTop: '10px' }}>
+  <Heading as="h3" sx={{textAlign: 'center', marginTop: '10px' }}>
     600 March Rd, Kanata, ON K2K 2E6, Canada
   </Heading>
-  <Heading as="h2" sx={{ marginTop: '10px' }}>
+  <Heading as="h2" sx={{textAlign: 'center', marginTop: '10px' }}>
     Sign up today for a scrappy adventure. Spots are limited!
   </Heading>
+
 </Box>
 
+<Link
+            href="https://forms.hackclub.com/scrapyard-signup?event=ottawa"
+            target="_blank"
+            style={{
+              textDecoration: 'none',
+              pointerEvents: 'auto'
+            }}
+          >
+            <Box
+              sx={{
+                backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+                filter: 'drop-shadow(1px 5px 5px #000)',
+                transition: 'transform 0.2s',
+                ':hover': {
+                  transform: 'scale(1.5)'
+                },
+                transform: 'scale(1.3)',
+                zIndex: 30,
+                minWidth: '8em',
+                padding: '15px',
+                textDecoration: 'none',
+                pointerEvents: 'auto',
+                position: 'relative',
+                m: 4
+              }}
+            >
+              <Heading
+                as="h2"
+                sx={{
+                  fontFamily: 'p22-stanyan',
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  fontSize: ['1.4em', '1.6em'],
+                  textTransform: 'inherit!important',
+                  width: '100%',
+                  textDecoration: 'none',
+                  pointerEvents: 'auto'
+                }}
+              >
+                Sign&nbsp;up&nbsp;for&nbsp;Scrapyard
+              </Heading>
+            </Box>
+          </Link>
+          <img
+          src="/elements/paper-top.png"
+          style={{
+            position: 'relative',
+            top: '0px',
+            right: '0px',
+            width: '100%',
+            transform: 'translateY(+10%)',
+            zIndex: 20
+          }}
+        />
       </Box>
-
+      
       <Box
   sx={{
     display: 'flex',
@@ -597,6 +752,7 @@ background: "url('/backgrounds/lined-paper.png')",
             alignItems: 'center'
           }}
         >
+
           <Heading
             as="h1"
             sx={{
@@ -649,7 +805,7 @@ background: "url('/backgrounds/lined-paper.png')",
             fontFamily: 'moonblossom',
             textAlign: 'center',
       margin: '8%',
-                fontSize: ['1.2em', '1.4em'],
+                fontSize: ['1.7em', '1.8em'],
                 textTransform: 'inherit!important',
                 paddingY: ['15px', '0px']
               }}
@@ -672,7 +828,7 @@ background: "url('/backgrounds/lined-paper.png')",
               }}
             >
               {/* TODO: Change Ottawa to your event's city */}
-              Thanks you to our generous Sponsors!
+              Thank you to our generous Sponsors!
             </Heading>
             <Box
   sx={{
@@ -940,7 +1096,7 @@ background: "url('/backgrounds/lined-paper.png')",
                 This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                check out <Link href='https://workshops.hackclub.com/'>Hack Club Workshops</Link>.
               </>
             ),
             'What can I make at Scrapyard?': (
@@ -973,14 +1129,13 @@ background: "url('/backgrounds/lined-paper.png')",
             ),
             'What if my parents are concerned?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
+                We’re here to help! Ask them to reach out to {' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="tishya.ottawa@scrapyard.hackclub.com">
+                <Link href="mailto:tishya.ottawa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   tishya.ottawa@scrapyard.hackclub.com
                 </Link>{' '}
-                for questions.
+                and we'll make sure to answer all their questions.
               </>
             ),
             'What if I have more questions?': (
@@ -1043,41 +1198,50 @@ background: "url('/backgrounds/lined-paper.png')",
           })}
         </Grid>
         <Link
-          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
-          target="_blank"
-        >
-          <Box
-            sx={{
-              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100% 100%',
-              filter: 'drop-shadow(5px 5px 5px #000)',
-              transition: 'transform 0.2s',
-              ':hover': {
-                transform: 'scale(1.1)'
-              },
-              zIndex: 20,
-              padding: 1,
-              my: 3
+            href="https://forms.hackclub.com/scrapyard-signup?event=ottawa"
+            target="_blank"
+            style={{
+              textDecoration: 'none',
+              pointerEvents: 'auto'
             }}
           >
-            <Heading
-              as="h2"
+            <Box
               sx={{
-                fontFamily: 'moonblossom',
-                textAlign: 'center',
-                margin: '8%',
-                fontSize: ['1.2em', '1.4em'],
-                textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
+                backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+                filter: 'drop-shadow(1px 5px 5px #000)',
+                transition: 'transform 0.2s',
+                ':hover': {
+                  transform: 'scale(1.5)'
+                },
+                transform: 'scale(1.3)',
+                zIndex: 30,
+                minWidth: '8em',
+                padding: '15px',
+                textDecoration: 'none',
+                pointerEvents: 'auto',
+                position: 'relative',
+                m: 4
               }}
             >
-              {/* TODO: Change Ottawa to your event's city */}
-              SIGN UP FOR SCRAPYARD OTTAWA
-            </Heading>
-          </Box>
-        </Link>
+              <Heading
+                as="h2"
+                sx={{
+                  fontFamily: 'p22-stanyan',
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  fontSize: ['1.4em', '1.6em'],
+                  textTransform: 'inherit!important',
+                  width: '100%',
+                  textDecoration: 'none',
+                  pointerEvents: 'auto'
+                }}
+              >
+                Sign&nbsp;up&nbsp;for&nbsp;Scrapyard
+              </Heading>
+            </Box>
+          </Link>
         <Heading
           as="h2"
           sx={{
