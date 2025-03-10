@@ -22,7 +22,7 @@ Note: To test your changes locally, use `npm install` and `npm run dev`.
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-
+import React, { useEffect, useState } from 'react'
 // TODO: Change this schedule to your own!
 const schedule = [
   { time: '09:30-10:00', event: 'Doors open' },
@@ -61,7 +61,132 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+export default function Bristol() {
+   const [bronzeSponsors, setBronzeSponsors] = useState([])
+   const [silverSponsors, setSilverSponsors] = useState([])
+   const [goldSponsors, setGoldSponsors] = useState([])
+   const [partnerSponsors, setPartnerSponsors] = useState([])
+
+  useEffect(() => {
+  async function fetchBronzeSponsors() {
+    try {
+      // Simulate fetch with hardcoded data
+      const response = await new Promise((resolve) =>
+        resolve({
+          json: () => Promise.resolve([
+            {
+              name: 'Yubico',
+              url: 'https://www.yubico.com/',
+              image: 'https://www.yubico.com/wp-content/uploads/2023/10/icon-yubico-verified@2x.png'
+            },
+            {
+              name: 'Brain.fm',
+              url: 'Brain.fm',
+              image: 'https://cdn.brain.fm/images/logo-purple.png'
+            }
+          ])
+        })
+      );
+
+      const data = await response.json();
+      setBronzeSponsors(data);
+    } catch (error) {
+      setBronzeSponsors([]);
+    }
+  }
+
+  fetchBronzeSponsors();
+}, []);
+
+ 
+  useEffect(() => {
+  async function fetchSilverSponsors() {
+    try {
+      // Simulate fetch with hardcoded data
+      const response = await new Promise((resolve) =>
+        resolve({
+          json: () => Promise.resolve([
+            {
+              name: 'This could be your organisation',
+              url: 'mailto:moe-rotimi.bristol@scrapyard.hackclub.com',
+              image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Color_icon_pink_v2.svg/1200px-Color_icon_pink_v2.svg.png'
+            },
+            {
+              name: 'This could be your organisation',
+              url: 'mailto:moe-rotimi.bristol@scrapyard.hackclub.com',
+              image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Color_icon_pink_v2.svg/1200px-Color_icon_pink_v2.svg.png'
+            }
+          ])
+        })
+      );
+
+      const data = await response.json();
+      setSilverSponsors(data);
+    } catch (error) {
+      setSilverSponsors([]);
+    }
+  }
+
+  fetchSilverSponsors();
+}, []);
+ 
+   useEffect(() => {
+  async function fetchGoldSponsors() {
+    try {
+      // Simulate fetch with hardcoded data
+      const response = await new Promise((resolve) =>
+        resolve({
+          json: () => Promise.resolve([
+            {
+              name: 'This could be your organisation',
+              url: 'mailto:moe-rotimi.bristol@scrapyard.hackclub.com',
+              image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Color_icon_pink_v2.svg/1200px-Color_icon_pink_v2.svg.png'
+            },
+            {
+              name: 'This could be your organisation',
+              url: 'mailto:moe-rotimi.bristol@scrapyard.hackclub.com',
+              image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Color_icon_pink_v2.svg/1200px-Color_icon_pink_v2.svg.png'
+            }
+          ])
+        })
+      );
+
+      const data = await response.json();
+      setGoldSponsors(data);
+    } catch (error) {
+      setGoldSponsors([]);
+    }
+  }
+
+  fetchGoldSponsors();
+}, []);
+ 
+   useEffect(() => {
+  async function fetchPartnerSponsors() {
+    try {
+      // Simulate fetch with hardcoded data
+      const response = await new Promise((resolve) =>
+        resolve({
+          json: () => Promise.resolve([
+            {
+              name: 'Hack Club',
+              url: 'https://hackclub.com/',
+              image: 'https://assets.hackclub.com/icon-square.png'    
+            }
+          ])
+        })
+      );
+
+      const data = await response.json();
+      setPartnerSponsors(data);
+    } catch (error) {
+      setPartnerSponsors([]);
+    }
+  }
+
+  fetchPartnerSponsors();
+}, []);
+  
   return (
     <Box
       sx={{
@@ -482,6 +607,439 @@ export default function ExampleCity() {
           }}
         >
           {schedule.map((item, i) => (
+            <Box
+  sx={{
+    width: '100%',
+    background: "url('/backgrounds/lined-paper.png')",
+    backgroundSize: 'cover!important',
+    backgroundPosition: 'center center',
+    display: 'block',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    overflow: 'visible',
+    gap: '20px',
+    height: ['auto'],
+    position: 'relative'
+  }}
+  id="sponsors"
+>
+  <Box
+    sx={{
+      display: 'flex',
+      width: '100%',
+      height: '100%',
+      flexWrap: 'wrap',
+      p: '4vw',
+      position: 'relative',
+      overflow: 'visible',
+      justifyContent: ['space-around', 'space-around', null],
+      pb: '12vw'
+    }}
+  >
+    <Box
+      sx={{
+        background: "url('/elements/stapled-paper.png')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100px',
+        width: '400px'
+      }}
+    >
+      <Heading
+        as="h2"
+        sx={{
+          textAlign: 'center',
+          fontSize: '3em',
+          marginTop: '-10px'
+        }}
+      >
+        Sponsors
+      </Heading>
+    </Box>
+  </Box>
+
+  <div
+    style={{
+      width: '100%',
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '100px',
+      marginTop: '50px',
+      transform: 'scale(1.1)'
+    }}
+  >
+    <div>
+      <Box
+        sx={{
+          backgroundColor: '#69c5f1',
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          alignItems: 'center',
+          padding: '20px',
+          outline: 'solid 2px white',
+          transition: 'transform 0.2s',
+          zIndex: 2
+          ':hover': {
+                     transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`
+          }
+        }}
+      >
+        <Heading
+          as="h2"
+          sx={{
+            textAlign: 'center',
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            mt: 2
+          }}
+        >
+          PARTNER SPONSORS
+        </Heading>
+      </Box>
+     </div
+            style={{
+                   display: 'flex',
+                   flexWrap: 'wrap',
+                   gap: '20px',
+                   // height: '200px',
+                   transform: 'scale(0.9)',
+                   justifyContent: 'center'
+                 }}
+                >
+                 {partnerSponsors.map((sponsor, i) => (
+                   <Link
+                     href={sponsor.url}
+                     target="_blank"
+                     sx={{
+                       backgroundColor: '#69c5f1',
+                       display: 'flex',
+                       flexDirection: 'column',
+                       width: '200px',
+                       alignItems: 'center',
+                       padding: '20px',
+                       transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                       outline: 'solid 2px white',
+                       transition: 'transform 0.2s',
+                       ':hover': {
+                         transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`,
+                         zIndex: 1
+                       }
+                     }}
+                   >
+                     <Image
+                       key={i}
+                       src={sponsor.image}
+                       alt={sponsor.name}
+                       style={{
+                         width: '100px',
+                         height: '100px',
+                         objectFit: 'contain'
+                       }}
+                     />
+                     <Text
+                       sx={{
+                         textAlign: 'center',
+                         fontSize: '1.5em',
+                         fontFamily: 'moonblossom',
+                         color: 'white',
+                         mt: 2,
+                         wordWrap: 'break-word'
+                       }}
+                     >
+                       {sponsor.name}
+                     </Text>
+                   </Link>
+                 ))}
+               </div>
+             </div>
+            </div>
+           <div
+             style={{
+               width: '100%',
+               display: 'flex',
+               flexWrap: 'wrap',
+               flexDirection: 'column',
+               alignItems: 'center',
+               gap: '100px',
+               marginTop: '50px'
+             }}
+           >
+             <div>
+               <Box
+                 sx={{
+                   backgroundColor: '#c9ae53',
+                   display: 'flex',
+                   flexDirection: 'column',
+                   width: '100%',
+                   alignItems: 'center',
+                   padding: '20px',
+                   transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                   outline: 'solid 2px white',
+                   transition: 'transform 0.2s',
+                   zIndex: 2,
+                   ':hover': {
+                     transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`
+                   }
+                 }}
+               >
+                 <Heading
+                   as="h2"
+                   sx={{
+                     textAlign: 'center',
+                     fontSize: '1.5em',
+                     fontFamily: 'moonblossom',
+                     color: 'white',
+                     mt: 2
+                   }}
+                 >
+                   GOLD SPONSORS
+                 </Heading>
+               </Box>
+               <div
+                 style={{
+                   display: 'flex',
+                   flexWrap: 'wrap',
+                   gap: '20px',
+                   // height: '200px',
+                   transform: 'scale(0.9)',
+                   justifyContent: 'center'
+                 }}
+               >
+                 {goldSponsors.map((sponsor, i) => (
+                   <Link
+                     href={sponsor.url}
+                     target="_blank"
+                     sx={{
+                       backgroundColor: '#c9ae53',
+                       display: 'flex',
+                       flexDirection: 'column',
+                       width: '200px',
+                       alignItems: 'center',
+                       padding: '20px',
+                       transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                       outline: 'solid 2px white',
+                       transition: 'transform 0.2s',
+                       ':hover': {
+                         transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`,
+                         zIndex: 1
+                       }
+                     }}
+                   >
+                     <Image
+                       key={i}
+                       src={sponsor.image}
+                       alt={sponsor.name}
+                       style={{
+                         width: '100px',
+                         height: '100px',
+                         objectFit: 'contain'
+                       }}
+                     />
+                     <Text
+                       sx={{
+                         textAlign: 'center',
+                         fontSize: '1.5em',
+                         fontFamily: 'moonblossom',
+                         color: 'white',
+                         mt: 2,
+                         wordWrap: 'break-word'
+                       }}
+                     >
+                       {sponsor.name}
+                     </Text>
+                   </Link>
+                 ))}
+               </div>
+             </div>
+             <div>
+               <Box
+                 sx={{
+                   backgroundColor: '#c9c9c9',
+                   display: 'flex',
+                   flexDirection: 'column',
+                   width: '100%',
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   padding: '20px',
+                   transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                   outline: 'solid 2px white',
+                   marginTop: '-50px',
+                   transition: 'transform 0.2s',
+                   zIndex: 2,
+                   ':hover': {
+                     transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`
+                   }
+                 }}
+               >
+                 <Heading
+                   as="h2"
+                   sx={{
+                     textAlign: 'center',
+                     fontSize: '1.5em',
+                     fontFamily: 'moonblossom',
+                     color: 'white',
+                     mt: 2
+                   }}
+                 >
+                   SILVER SPONSORS
+                 </Heading>
+               </Box>
+               <div
+                 style={{
+                   display: 'flex',
+                   flexWrap: 'wrap',
+                   gap: '20px',
+                   // height: '200px',
+                   transform: 'scale(0.9)',
+                   justifyContent: 'center'
+                 }}
+               >
+                 {silverSponsors.map((sponsor, i) => (
+                   <Link
+                     href={sponsor.url}
+                     target="_blank"
+                     sx={{
+                       backgroundColor: '#c9c9c9',
+                       display: 'flex',
+                       flexDirection: 'column',
+                       width: '200px',
+                       alignItems: 'center',
+                       padding: '20px',
+                       transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                       outline: 'solid 2px white',
+                       transition: 'transform 0.2s',
+                       ':hover': {
+                         transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`,
+                         zIndex: 1
+                       }
+                     }}
+                   >
+                     <Image
+                       key={i}
+                       src={sponsor.image}
+                       alt={sponsor.name}
+                       style={{
+                         width: '100px',
+                         height: '100px',
+                         objectFit: 'contain'
+                       }}
+                     />
+                     <Text
+                       sx={{
+                         textAlign: 'center',
+                         fontSize: '1.5em',
+                         fontFamily: 'moonblossom',
+                         color: 'white',
+                         mt: 2,
+                         wordWrap: 'break-word'
+                       }}
+                     >
+                       {sponsor.name}
+                     </Text>
+                   </Link>
+                 ))}
+               </div>
+             </div>
+             <div style={{ marginBottom: '-130px' }}>
+               <Box
+                 sx={{
+                   backgroundColor: '#c78f16',
+                   display: 'flex',
+                   flexDirection: 'column',
+                   width: '100%',
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   padding: '20px',
+                   transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                   outline: 'solid 2px white',
+                   marginTop: '-50px',
+                   transition: 'transform 0.2s',
+                   ':hover': {
+                     transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`,
+                     zIndex: 1
+                   }
+                 }}
+               >
+                 <Heading
+                   as="h2"
+                   sx={{
+                     textAlign: 'center',
+                     fontSize: '1.5em',
+                     fontFamily: 'moonblossom',
+                     color: 'white',
+                     mt: 2
+                   }}
+                 >
+                   BRONZE SPONSORS
+                 </Heading>
+               </Box>
+               <div
+                 style={{
+                   display: 'flex',
+                   flexWrap: 'wrap',
+                   gap: '20px',
+                   // height: '200px',
+                   transform: 'scale(0.8)',
+                   justifyContent: 'center'
+                 }}
+               >
+                 {bronzeSponsors.map((sponsor, i) => (
+                   <Link
+                     href={sponsor.url}
+                     target="_blank"
+                     sx={{
+                       backgroundColor: '#c78f16',
+                       display: 'flex',
+                       flexDirection: 'column',
+                       width: '200px',
+                       alignItems: 'center',
+                       padding: '20px',
+                       transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
+                       outline: 'solid 2px white',
+                       transition: 'transform 0.2s',
+                       ':hover': {
+                         transform: `rotate(${(Math.random() - 0.5) * 10}deg) scale(1.02)`,
+                         zIndex: 1
+                       }
+                     }}
+                   >
+                     <Image
+                       key={i}
+                       src={sponsor.image}
+                       alt={sponsor.name}
+                       style={{
+                         width: '100px',
+                         height: '100px',
+                         objectFit: 'contain'
+                       }}
+                     />
+                     <Text
+                       sx={{
+                         textAlign: 'center',
+                         fontSize: '1.5em',
+                         fontFamily: 'moonblossom',
+                         color: 'white',
+                         mt: 2,
+                         wordWrap: 'break-word'
+                       }}
+                     >
+                       {sponsor.name}
+                     </Text>
+                   </Link>
+                 ))}
+               </div>
+             </div>
+           </div>
+          </Box>
+         </Box>
+                   
             <div
               style={{
                 display: 'flex',
