@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// TODO: not finalized yet!
+
 const schedule = [
   { time: '07:00 AM', event: 'Doors open' },
   { time: '08:00 AM', event: 'Opening ceremony' },
@@ -15,7 +15,7 @@ const schedule = [
   { time: '04:30 PM', event: 'Final Coding and Debugging!' },
   { time: '06:30 PM', event: 'Demos and Submission!' },
   { time: '07:30 PM', event: 'Closing Ceremony' },
-  
+  { time: '08:00 PM', event: 'Doors Close' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -137,10 +137,13 @@ export default function ExampleCity() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.2em', '1.3em']
               }}
             >
-              Bengaluru - March&nbsp;15-16
+              Bengaluru - March&nbsp;16th @
+              <Link href="https://maps.app.goo.gl/G46eciLCZsvhhbKw8" target="_blank">
+    The Hub Bengaluru
+  </Link>
             </Heading>
           </Box>
         </Box>
@@ -597,7 +600,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard BENGALURU is a 24-HOUR event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard BENGALURU is a 12-HOUR event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
