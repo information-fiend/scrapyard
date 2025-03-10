@@ -113,7 +113,28 @@ export default function Seattle() {
         overflowX: 'hidden',
       }}
     >
+
       <Flag />
+
+      <Link
+        href="https://discord.gg/GZyDA3arZX"
+        target="_blank"
+        aria-label="Join our Discord!"
+        sx={{ position: 'fixed', top: 4, right: 0, zIndex: 2 }}
+      >
+          <Image
+          src="https://img.icons8.com/?size=100&id=86982&format=png&color=FFFFFF"
+          alt="Hack Club flag"
+          sx={{
+            width: [60, 60, 90],
+            backgroundColor: '#317975',
+            border: '2px solid rgb(255, 255, 255)',
+            marginRight: '10px',
+            padding: '10px',
+            borderRadius: '30%',
+          }}
+          />
+      </Link>
 
       {/* Hero Section */}
       <Box
@@ -131,6 +152,7 @@ export default function Seattle() {
         }}
       >
         {/* Wordmark & Seattle skyline */}
+
         <Box sx={{ width: '100%', maxWidth: '1000px', textAlign: 'center', position: 'relative' }}>
           <Image
             sx={{
@@ -645,9 +667,8 @@ export default function Seattle() {
               ),
               'What do I need to bring?': (
                 <>
-                  A laptop, charger, and curiosity. If you're staying overnight, a
-                  sleeping bag & toiletries might help. Bring hardware or tools if
-                  you'd like.
+                  A laptop, charger, and curiosity. Bring hardware or tools if
+                  you'd like. We can pay for some hardware, Just ask!
                 </>
               ),
               'I am new to coding...': (
@@ -675,7 +696,7 @@ export default function Seattle() {
                 <>
                   Reach out in <strong>#scrapyard</strong> on the Hack Club Slack
                   or email{' '}
-                  <Link href="mailto:scrapyard-seattle@hackclub.com">
+                  <Link href="mailto:karunyap.seattle@scrapyard.hackclub.com">
                     scrapyard-seattle@hackclub.com
                   </Link>
                   !
@@ -735,6 +756,104 @@ export default function Seattle() {
               </Card>
             ))}
           </Grid>
+
+          <Card
+            marginY={5}
+            bg="#B9ECF6"
+          >
+              <Heading
+                as="h2"
+                sx={{
+                  fontSize: ['1.8rem', '2.4rem'],
+                  mb: 4,
+                  position: 'relative',
+                  text:'black',
+                  color: "black"
+                }}
+              >
+                Our Awesome Sponsors:
+              </Heading>
+
+              <Grid
+                columns={[1, 1, 2]}
+                gap={5}
+                p={4}
+              >
+              <Card
+                sx={{
+                  width: "fit-content",
+                  height: "fit-content",
+                  bg: "#95CDCE",
+                  transition: 'all 0.3s ease',
+                  transform: 'rotate(1deg)',
+                  ':hover': {
+                    transform: 'translateY(-8px) rotate(0)',
+                    boxShadow: '0 12px 48px rgba(0,0,0,0.15)',
+                  },
+                }}
+              >
+                  <Image
+                    sx={{
+                      width: ['150px', '200px'],
+                      height: ['auto', 'auto'],
+                      objectFit: 'contain',
+                      mx: 'auto',
+                    }}
+                    src="/city/seattle/AwsLogo.png"
+                  />
+              </Card>
+              <Card
+                sx={{
+                  width: "fit-content",
+                  height: "fit-content",
+                  bg: "#FFD8EA",
+                  transform: 'rotate(-2deg)',
+                  ':hover': {
+                  transform: 'translateY(-8px) rotate(0)',
+                  boxShadow: '0 12px 48px rgba(0,0,0,0.15)',
+                },
+                }}
+              >
+                  <Image
+                    sx={{
+                      width: ['auto', 'auto'],
+                      height: ['auto', 'auto'],
+                      objectFit: 'contain',
+                      mx: 'auto',
+                    }}
+                    src="/city/seattle/MotherDuckLogo.png"
+                  />
+              </Card>
+
+              {/* Stack Lock logo*/}
+              <Card
+                sx={{
+                  width: "fit-content",
+                  height: "fit-content",
+                  bg: "#E7EDA3",
+                  borderRadius: "50px",
+                  transform: 'rotate(2deg)',
+                  ':hover': {
+                  transform: 'translateY(-8px) rotate(0)',
+                  boxShadow: '0 12px 48px rgba(0,0,0,0.15)',
+                },
+                }}
+              >
+                  <Image
+                    sx={{
+                      width: ['auto', 'auto'],
+                      height: ['auto', 'auto'],
+                      objectFit: 'contain',
+                      mx: 'auto',
+                    }}
+                    src="/city/seattle/StackLock.png"
+                  />
+              </Card>
+            </Grid>
+
+          </Card> 
+
+          {/*Sponsor segement*/}
 
           {/* Final Sign-up Button */}
           <Link
