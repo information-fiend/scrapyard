@@ -154,11 +154,11 @@ export default function ExampleCity() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.2em', '1.2em']
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Frisco - March&nbsp;22
+              1648 FM 423 #400, Frisco, TX 75033 - March&nbsp;22
             </Heading>
           </Box>
         </Box>
