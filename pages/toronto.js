@@ -3,7 +3,19 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
-const schedule = [{ time: 'To Be Announced!', event: 'Schedule' }]
+const schedule = [
+  { time: '7:00–8:30 AM', event: 'Organizers setup' },
+  { time: '8:30–9:00 AM', event: 'Arrival & settling in' },
+  { time: '9:00–9:30 AM', event: 'Opening ceremony' },
+  { time: '9:30 AM–8:30 PM', event: 'Programming' },
+  {
+    time: '8:30–9:20 PM',
+    event:
+      "Presentation (One person stays at a project's station while others circulate to vote on their favorite project)"
+  },
+  { time: '9:20–9:30 PM', event: 'Closing ceremony' },
+  { time: '9:30–10:00 PM', event: 'Clean up & departure' }
+]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
@@ -148,8 +160,7 @@ export default function Toronto() {
                 mt: 1
               }}
             >
-              Saturday, 9am to 9pm or Saturday to Sunday 2pm to 2pm! (Yet to be
-              finalzied) ^
+              Sunday 9pm to 9:30pm!
             </Text>
             <Text
               sx={{
@@ -159,7 +170,8 @@ export default function Toronto() {
                 mt: 1
               }}
             >
-              TMU's DMZ, 10 Dundas St E, 6th Floor
+              TMU, 245 Church Street, Toronto, ON M5B 2K3, Room ENG-LG14 (Enter
+              through the central entrance doors facing Church Street)
             </Text>
             <Text
               sx={{
@@ -885,7 +897,7 @@ export default function Toronto() {
             width: '90%',
             maxWidth: '1200px',
             mx: 'auto',
-            my: 6,
+            my: 2,
             py: 4,
             background: "url('/backgrounds/lined-paper.png')",
             backgroundSize: 'cover',
@@ -915,25 +927,33 @@ export default function Toronto() {
           >
             Sponsors
           </Heading>
-
-          <Box sx={{ mb: 4, px: [2, 3, 4] }}>
+          <Grid
+            gap={4}
+            sx={{
+              px: [2, 3, 4],
+              // On small screens show a single column; on larger screens use 2 columns (2fr/1fr)
+              gridTemplateColumns: ['1fr', '2fr 1fr']
+            }}
+          >
             <Card
               sx={{
                 p: 4,
                 textAlign: 'center',
                 border: '2px solid #000',
                 background: 'white',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.12)',
-                maxWidth: '900px',
-                mx: 'auto'
+                boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
+                transition: 'transform 0.2s ease',
+                ':hover': {
+                  transform: 'translateY(-3px)'
+                }
               }}
             >
               <Image
                 src="https://cdn.hack.pet/U084RT5K678/image%20(4).png"
                 alt="Arista Networks"
                 sx={{
-                  width: '70%',
-                  maxHeight: '160px',
+                  width: '90%',
+                  height: 'auto',
                   objectFit: 'contain',
                   mx: 'auto',
                   mb: 3
@@ -945,59 +965,44 @@ export default function Toronto() {
               <Text sx={{ fontSize: '1.1em' }}>
                 Arista Networks is an industry leader in data-driven, client to
                 cloud networking for large data center/AI, campus and routing
-                environments. Arista's award-winning platforms deliver
+                environments. Their award-winning platforms deliver
                 availability, agility, automation, analytics and security
                 through an advanced network operating stack.
               </Text>
             </Card>
-          </Box>
-
-          <Grid columns={[1, 1, 2]} gap={4} sx={{ px: [2, 3, 4] }}>
-            {[
-              {
-                name: 'DMZ',
-                description:
-                  'DMZ is a world-leading incubator for tech startups around the world. We help startups build great businesses by connecting them with customers, capital, experts and a community of entrepreneurs and influencers.',
-                logo: 'https://hc-cdn.hel1.your-objectstorage.com/s/v3/45a4c6b4f75031759d5c822e37630667dbb7db26_svgviewer-output__1_.svg'
-              },
-              {
-                name: 'System76',
-                description:
-                  'System76 builds powerful open source computers, keyboards, and software, empowering creators, makers, and builders to unleash their potential.',
-                logo: 'https://cdn.hack.pet/U084RT5K678/system76-logo-open-source-tagliner4_1730474034__00841.webp'
-              }
-            ].map((sponsor, i) => (
-              <Card
-                key={i}
+            <Card
+              sx={{
+                p: 3,
+                textAlign: 'center',
+                border: '2px solid #000',
+                background: 'white',
+                boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
+                transition: 'transform 0.2s ease',
+                ':hover': {
+                  transform: 'translateY(-3px)'
+                }
+              }}
+            >
+              <Image
+                src="https://cdn.hack.pet/U084RT5K678/system76-logo-open-source-tagliner4_1730474034__00841.webp"
+                alt="System76"
                 sx={{
-                  p: 3,
-                  textAlign: 'center',
-                  border: '2px solid #000',
-                  background: 'white',
-                  boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
-                  transition: 'transform 0.2s ease',
-                  ':hover': {
-                    transform: 'translateY(-3px)'
-                  }
+                  width: '70%',
+                  maxHeight: '140px',
+                  objectFit: 'contain',
+                  mx: 'auto',
+                  mb: 3
                 }}
-              >
-                <Image
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  sx={{
-                    width: '80%',
-                    height: '140px',
-                    objectFit: 'contain',
-                    mx: 'auto',
-                    mb: 3
-                  }}
-                />
-                <Heading as="h3" sx={{ fontSize: '1.5em', mb: 2 }}>
-                  {sponsor.name}
-                </Heading>
-                <Text sx={{ fontSize: '1.1em' }}>{sponsor.description}</Text>
-              </Card>
-            ))}
+              />
+              <Heading as="h3" sx={{ fontSize: '1.5em', mb: 2 }}>
+                System76
+              </Heading>
+              <Text sx={{ fontSize: '1em' }}>
+                System76 builds powerful open source computers, keyboards, and
+                software, empowering creators, makers, and builders to unleash
+                their potential.
+              </Text>
+            </Card>
           </Grid>
 
           <Heading
@@ -1023,7 +1028,8 @@ export default function Toronto() {
               'https://hc-cdn.hel1.your-objectstorage.com/s/v3/eccd6fe6bb17a69a954054518cb053a44369ce1b_xyz-logo-color.png',
               'https://hc-cdn.hel1.your-objectstorage.com/s/v3/9d570f29ffe22aa71800cb981104a1bd37093296_white__1_.png',
               'https://hc-cdn.hel1.your-objectstorage.com/s/v3/cc36a0d2d1d081b1a3bc4b534fad1bfde5d39be8_logo__1_.svg',
-              'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20214400.png'
+              'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20214400.png',
+              'https://community.aws/img/AWS_logo_light.svg'
             ].map((logo, i) => (
               <Box
                 key={i}
