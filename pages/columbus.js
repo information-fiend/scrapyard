@@ -25,6 +25,7 @@ const schedule = [
 const scheduleday2 = [
   { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
   { time: '10:30 AM', event: 'FINAL HACKING BLOCK' },
+  { time: '11:00 AM', event: 'AUTONOMOUS ROBOTS TALK' },  
   { time: '12:00 PM', event: 'PROJECT SUBMISSION HOW-TO' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'PROJECT DUE & HACKING ENDS' },
