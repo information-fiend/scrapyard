@@ -24,21 +24,16 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
-// const schedule = [
-//   { time: '11:00 AM', event: 'Doors open' },
-//   { time: '12:00 PM', event: 'Opening ceremony' },
-//   { time: '12:30 PM', event: 'Lunch' },
-//   { time: '1:00 PM', event: 'Start working on your project!' },
-//   { time: '2:00 PM', event: 'Workshop 1' },
-//   { time: '4:00 PM', event: 'Activity 1' },
-//   { time: '4:00 PM', event: 'Workshop 2' },
-//   { time: '6:00 PM', event: 'Dinner' },
-//   { time: '8:00 PM', event: 'Lightning talks' },
-//   { time: '12:00 AM', event: 'Midnight surprise' },
-//   { time: '8:00 AM', event: 'Breakfast' },
-//   { time: '10:30 AM', event: 'Demos!' },
-//   { time: '12:00 PM', event: 'Closing ceremony' }
-// ]
+const schedule = [
+  { time: '8:00 - 8:30 AM', event: 'Doors open' },
+  { time: '8:30 AM', event: 'Opening ceremony' },
+  { time: '9:20 AM', event: 'Workshop 1 (TBD)' },
+  { time: '10:30 AM', event: 'Workshop 2 (TBD)' },
+  { time: '11:25 AM', event: 'Workshop 3 (TBD)' },
+  { time: '12 AM', event: 'Lunch + Lightning Talks' },
+  { time: '4:30 PM', event: 'Demos + Voting Begins' },
+  { time: '5:30 PM', event: 'Closing Ceremony' }
+]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
@@ -140,7 +135,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -170,10 +165,13 @@ export default function ExampleCity() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.1em', '1.3em']
               }}
             >
-              BOSTON - March&nbsp;15-16
+              BOSTON - March&nbsp;15, {" "}
+              <Link href="https://www.google.com/maps/place/Microsoft+New+England+Research+and+Development+Center/@42.3614256,-71.0812092,1666m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e370a423d61825:0x58516248462c99eb!8m2!3d42.3614256!4d-71.0812092!16s%2Fg%2F1tfx5xkv!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D">
+                Microsoft NERD Center
+              </Link>
             </Heading>
           </Box>
         </Box>
@@ -408,7 +406,7 @@ export default function ExampleCity() {
         }}
       ></Box>
 
-      {/* <Box
+      <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
@@ -455,7 +453,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Boston is a 24 hour event - HERE'S THE ROUGH
+          Scrapyard Boston is a 12 hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -511,7 +509,7 @@ export default function ExampleCity() {
             </div>
           ))}
         </Box>
-      </Box> */}
+      </Box>
 
       <Box
         sx={{
@@ -638,7 +636,7 @@ export default function ExampleCity() {
             'What do I need?': (
               <>
                 Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
+                overnight event, bring toiletries and sleeping bags too.
                 Additionally, if you plan to work on a hardware project, bring
                 the tools you'll need.
               </>
@@ -683,21 +681,21 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:sofia@hackclub.com">
-                  sofia@hackclub.com
+                <Link href="mailto:boston@scrapyard.hackclub.com">
+                  boston@scrapyard.hackclub.com 
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
-              <>=
-                Contact us! Feel free to reach out to us in the 
+              <>
+                Contact us! Feel free to reach out to us in the {' '}
                 <Link href="https://hackclub.slack.com/archives/C085VB6F0T1">
                   #scrapyard-boston
-                </Link>
+                </Link>{' '}
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:sofia@hackclub.com">
-                  sofia@hackclub.com
+                <Link href="mailto:boston@scrapyard.hackclub.com">
+                  boston@scrapyard.hackclub.com 
                 </Link>
                 .
               </>

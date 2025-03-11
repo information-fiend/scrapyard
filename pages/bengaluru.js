@@ -2,21 +2,20 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// TODO: not finalized yet!
+
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '07:00 AM', event: 'Doors open' },
+  { time: '08:00 AM', event: 'Opening ceremony' },
+  { time: '09:00 AM', event: 'Workshops' },
+  { time: '10:00 AM', event: 'Snacks' },
+  { time: '10:30 AM', event: 'Start working on your project!' },
+  { time: '01:00 PM', event: 'Lunch' },
+  { time: '01:30 PM', event: 'Continue Hacking!' },
+  { time: '04:00 PM', event: 'Snacks' },
+  { time: '04:30 PM', event: 'Final Coding and Debugging!' },
+  { time: '06:30 PM', event: 'Demos and Submission!' },
+  { time: '07:30 PM', event: 'Closing Ceremony' },
+  { time: '08:00 PM', event: 'Doors Close' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -79,7 +78,7 @@ export default function ExampleCity() {
               maxWidth: '70vw',
               objectFit: 'contain'
             }}
-            src="https://i.ibb.co/R6Fn52x/blrwordmark.png"
+            src="https://cdn.hack.pet/slackcdn/8e1391a9c4d8af37a3192a870ca4f704.png"
             alt="Scrapyard"
           />
         </Box>
@@ -108,7 +107,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -138,10 +137,13 @@ export default function ExampleCity() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.2em', '1.3em']
               }}
             >
-              Bengaluru - March&nbsp;15-16
+              Bengaluru - March&nbsp;16th @
+              <Link href="https://maps.app.goo.gl/G46eciLCZsvhhbKw8" target="_blank">
+    The Hub Bengaluru
+  </Link>
             </Heading>
           </Box>
         </Box>
@@ -285,18 +287,10 @@ export default function ExampleCity() {
               filter: 'drop-shadow(5px 5px 5px #000000AA)'
             }}
           >
-            <Heading
-              sx={{
-                textDecoration: 'underline'
-              }}
-            >
+            <Heading sx={{ textDecoration: 'underline' }}>
               What's Scrapyard Bengaluru?
             </Heading>
-            <p
-              style={{
-                fontSize: '1.5em'
-              }}
-            >
+            <p style={{ fontSize: '1.5em' }}>
               Scrapyard Bengaluru is a hackathon for high schoolers happening in
               Bengaluru, where you can make the stupidest things you can think
               of! Anything, from a
@@ -366,6 +360,33 @@ export default function ExampleCity() {
           <Heading as="h2" sx={{ fontFamily: 'moonblossom', mb: 3 }}>
             Our Sponsors
           </Heading>
+
+          <Box sx={{ display: 'flex', gap: 4, mb: 4 }}>
+            <Box
+              sx={{
+                width: '400px', // spans two square boxes (2 x 200px)
+                height: '200px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px solid black',
+                backgroundColor: '#fff'
+              }}
+            >
+              <Link href="https://sentry.io" target="_blank">
+                <Image
+                  src="https://i.ibb.co/FbYjWYtK/sentry-wordmark-dark-400x119.png"
+                  alt="Rectangle Sponsor"
+                  sx={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </Link>
+            </Box>
+          </Box>
+
           <Grid columns={[1, 2, 3]} gap={4} sx={{ alignItems: 'center' }}>
             <Box
               sx={{
@@ -378,7 +399,7 @@ export default function ExampleCity() {
                 backgroundColor: '#fff'
               }}
             >
-              <Link href=" https://gen.xyz/" target="_blank">
+              <Link href="https://gen.xyz/" target="_blank">
                 <Image
                   src="https://cloud-lni8iqe2t-hack-club-bot.vercel.app/0xyz-logo-color.png"
                   alt="Gen XYZ"
@@ -390,7 +411,6 @@ export default function ExampleCity() {
                 />
               </Link>
             </Box>
-            {/*
             <Box
               sx={{
                 width: '200px',
@@ -402,11 +422,12 @@ export default function ExampleCity() {
                 backgroundColor: '#fff'
               }}
             >
-              <Link href="PLACEHOLDER_SPONSOR_2_LINK" target="_blank">
+              <Link href="https://codecrafters.io/" target="_blank">
                 <Image
-                  src="PLACEHOLDER_SPONSOR_2_URL"
-                  alt="Sponsor 2"
+                  src="https://i.ibb.co/270S43xz/Logomark-With-color.png"
+                  alt="Code Crafters"
                   sx={{
+                    width: '100%',
                     maxWidth: '100%',
                     maxHeight: '100%',
                     objectFit: 'contain'
@@ -425,10 +446,10 @@ export default function ExampleCity() {
                 backgroundColor: '#fff'
               }}
             >
-              <Link href="PLACEHOLDER_SPONSOR_3_LINK" target="_blank">
+              <Link href="https://stickermule.com" target="_blank">
                 <Image
-                  src="PLACEHOLDER_SPONSOR_3_URL"
-                  alt="Sponsor 3"
+                  src="https://i.ibb.co/WvTMy432/fabb97bf-0098-48ec-9f45-c47d23e97b28.webp"
+                  alt="Sticker Mule"
                   sx={{
                     maxWidth: '100%',
                     maxHeight: '100%',
@@ -437,8 +458,95 @@ export default function ExampleCity() {
                 />
               </Link>
             </Box>
-            */}
           </Grid>
+
+          {/*
+          // Additional row of square sponsors (commented out for now)
+          <Box
+            sx={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              my: 5
+            }}
+          >
+            <Heading as="h2" sx={{ fontFamily: 'moonblossom', mb: 3 }}>
+              More Sponsors
+            </Heading>
+            <Grid columns={[1, 2, 3]} gap={4} sx={{ alignItems: 'center' }}>
+              <Box
+                sx={{
+                  width: '200px',
+                  height: '200px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '2px solid black',
+                  backgroundColor: '#fff'
+                }}
+              >
+                <Link href="https://example.com/sponsor4" target="_blank">
+                  <Image
+                    src="https://via.placeholder.com/200"
+                    alt="Sponsor 4"
+                    sx={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </Link>
+              </Box>
+              <Box
+                sx={{
+                  width: '200px',
+                  height: '200px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '2px solid black',
+                  backgroundColor: '#fff'
+                }}
+              >
+                <Link href="https://example.com/sponsor5" target="_blank">
+                  <Image
+                    src="https://via.placeholder.com/200"
+                    alt="Sponsor 5"
+                    sx={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </Link>
+              </Box>
+              <Box
+                sx={{
+                  width: '200px',
+                  height: '200px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '2px solid black',
+                  backgroundColor: '#fff'
+                }}
+              >
+                <Link href="https://example.com/sponsor6" target="_blank">
+                  <Image
+                    src="https://via.placeholder.com/200"
+                    alt="Sponsor 6"
+                    sx={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </Link>
+              </Box>
+            </Grid>
+          </Box>
+          */}
         </Box>
       </Box>
 
@@ -456,9 +564,7 @@ export default function ExampleCity() {
         }}
       />
 
-      <Box
-        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
-      >
+      <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
@@ -494,7 +600,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard BENGALURU is a 24-HOUR event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard BENGALURU is a 12-HOUR event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -552,7 +658,11 @@ export default function ExampleCity() {
       </Box>
 
       <Box
-        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
       >
         <Box
           sx={{
