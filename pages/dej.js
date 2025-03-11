@@ -629,7 +629,7 @@ export default function ExampleCity() {
             'Cine poate participa la Scrapyard?': (
               <>
                 Toți elevii de liceu sau gimnazială pot participa. Nu trebuie să
-                fi în comunitatea hackclub sau liderul unui club.
+                fii în comunitatea hackclub sau liderul unui club.
               </>
             ),
             'Este tot gratis?': (
