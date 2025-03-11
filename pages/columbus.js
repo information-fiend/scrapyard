@@ -11,12 +11,12 @@ import { transform } from 'motion'
 const schedule = [
   { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
   { time: '10:30 PM', event: 'OPENING CEREMONY' },
+  { time: '11:30 PM', event: 'HACKING STARTS' },
   { time: '11:30 PM', event: 'TEAM FORMATION' },
   { time: '11:45 PM', event: 'STARTER WORKSHOP*' },
-  { time: '11:45 PM', event: 'HACKING STARTS' },
+  { time: '12:30 PM', event: 'CYBERSECURITY WORKSHOP*' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'STARTER WORKSHOP CONTINUES*' },
-  { time: '3:00 PM', event: 'CYBERSECURITY WORKSHOP*' },
   { time: '3:30 PM', event: 'DATA SCIENCE WORKSHOP*' },
   { time: '4:00 PM', event: 'SURPRISE EVENT & SNACKS' },
   { time: '6:00 PM', event: 'CLOSING FOR THE DAY' }
@@ -25,7 +25,7 @@ const schedule = [
 const scheduleday2 = [
   { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
   { time: '10:30 AM', event: 'FINAL HACKING BLOCK' },
-  { time: '11:00 AM', event: 'AUTONOMOUS ROBOTS TALK' },  
+  { time: '11:00 AM', event: 'SMART FACTORY ROBOTS TALK*' },  
   { time: '12:00 PM', event: 'PROJECT SUBMISSION HOW-TO' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'PROJECT DUE & HACKING ENDS' },
