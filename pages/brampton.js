@@ -77,6 +77,25 @@ export default function ExampleCity() {
         overflowX: 'hidden'
       }}
     >
+      <Box sx={{
+        position: "absolute",
+        padding: "1rem",
+        top: 0,
+        left: 0,
+        backgroundColor: "red",
+        width: "100%",
+        textAlign: "center",
+        fontWeight: "bold",
+        zIndex: 30,
+        fontSize: 20,
+      }}>
+        Scrapyard Brampton has merged with Scrapyard Toronto to make an even greater event!<br/>
+      <Link sx={{
+        color: "black",
+      }} href="/toronto">
+        ----{">"} Go to our new page {"<"}----
+      </Link>
+      </Box>
       <Head>
         {/* TODO: Change Brampton to your event's city */}
         <title>Scrapyard Brampton</title>
@@ -175,7 +194,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change Brampton to your event's city */}
-              Brampton - March&nbsp;15-16
+              [Combined with Toronto] - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -249,7 +268,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=brampton"
+          href="https://forms.hackclub.com/scrapyard-signup?event=toronto"
           target="_blank"
         >
           <Box
