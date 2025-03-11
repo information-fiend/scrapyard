@@ -28,13 +28,12 @@ const schedule = [
   { time: '10:00 AM', event: 'Doors open & Check-in' },
   { time: '10:30 AM', event: 'Opening ceremony' },
   { time: '11:00 AM', event: 'Team formation & Brainstorming' },
-  { time: '11:45 AM', event: 'Start hacking!' },
+  { time: '11:15 AM', event: 'Start hacking!' },
   { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:30 PM', event: 'Workshop: Building Scrappy Projects' },
   { time: '2:30 PM', event: 'Snack Break' },
   { time: '3:00 PM', event: 'Finish up projects' },
-  { time: '3:30 PM', event: 'Demos & Judging' },
-  { time: '4:00 PM', event: 'Prizes & Closing ceremony' }
+  { time: '4:00 PM', event: 'Demos & Judging' },
+  { time: '4:30 PM', event: 'Prizes & Closing ceremony' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -478,7 +477,7 @@ export default function ExampleCity() {
           >
             <Link href="https://hackclub.com" target="_blank">
               <Image 
-                src="/elements/orpheus-flag.svg" 
+                src="https://assets.hackclub.com/flag-orpheus-top.svg" 
                 alt="Hack Club"
                 sx={{
                   maxWidth: '180px',
@@ -507,20 +506,16 @@ export default function ExampleCity() {
               }
             }}
           >
-            <Link href="#" target="_blank">
-              <Box 
+            <Link href="https://www.loialinc.com/" target="_blank">
+              <Image 
+                src="https://cdn.hack.pet/slackcdn/c7ed792743837995247b5dc7f2814102.png" 
+                alt="Loial"
                 sx={{
-                  width: '180px',
-                  height: '120px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mb: 3,
-                  border: '1px dashed #ccc'
+                  maxWidth: '180px',
+                  maxHeight: '120px',
+                  mb: 3
                 }}
-              >
-                <Text sx={{ color: '#888' }}>Loial Logo</Text>
-              </Box>
+              />
             </Link>
             <Heading as="h3" mb={2}>Loial</Heading>
           </Card>
@@ -543,19 +538,15 @@ export default function ExampleCity() {
             }}
           >
             <Link href="https://www.explora.us/" target="_blank">
-              <Box 
+              <Image 
+                src="https://cdn.hack.pet/slackcdn/bb45f6ea9fa2c451cbf8e8b8c691da9f.png" 
+                alt="Explora"
                 sx={{
-                  width: '180px',
-                  height: '120px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mb: 3,
-                  border: '1px dashed #ccc'
+                  maxWidth: '180px',
+                  maxHeight: '120px',
+                  mb: 3
                 }}
-              >
-                <Text sx={{ color: '#888' }}>Explora Logo</Text>
-              </Box>
+              />
             </Link>
             <Heading as="h3" mb={2}>Explora</Heading>
           </Card>
@@ -577,20 +568,16 @@ export default function ExampleCity() {
               }
             }}
           >
-            <Link href="#" target="_blank">
-              <Box 
+            <Link href="https://www.newmexicomutual.com/" target="_blank">
+              <Image 
+                src="https://cdn.hack.pet/slackcdn/3d16061ea5f9aa0cedf09ce65c10bc6e.png" 
+                alt="NMM"
                 sx={{
-                  width: '180px',
-                  height: '120px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mb: 3,
-                  border: '1px dashed #ccc'
+                  maxWidth: '180px',
+                  maxHeight: '120px',
+                  mb: 3
                 }}
-              >
-                <Text sx={{ color: '#888' }}>NMM Logo</Text>
-              </Box>
+              />
             </Link>
             <Heading as="h3" mb={2}>NMM</Heading>
           </Card>
@@ -649,7 +636,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Albuquerque is a 24-hour event - HERE'S THE SCHEDULE!
+          Scrapyard Albuquerque is a 8-hour event - HERE'S THE SCHEDULE!
         </Heading>
         <Box
           sx={{
