@@ -221,6 +221,65 @@ export default function ExampleCity() {
             alt="Pink paper star"
           />
         </Box>
+
+        {/*Social Media Nav Bar*/}
+
+        <Box
+          sx={{
+            backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+            position: 'fixed',
+            right: ['40%'],
+            top: ['4%'],
+            filter: 'drop-shadow(5px 5px 5px #000)',
+            transition: 'transform 0.2s',
+            ':hover': {
+              transform: 'scale(1.1)'
+            },
+            zIndex: 30,
+            minWidth: '8em',
+            padding: '15px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '30px',
+            paddingRight: '30px'
+          }}
+        >
+          <Link href="https://www.facebook.com/profile.php?id=61568321672234">
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              Facebook
+            </Heading>
+          </Link>
+
+          <Link href="https://www.instagram.com/hack_club_philippines?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              Instagram
+            </Heading>
+          </Link>
+        </Box>
+
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
           href="https://forms.hackclub.com/scrapyard-signup?event=metro-manila"
@@ -260,6 +319,7 @@ export default function ExampleCity() {
           </Box>
         </Link>
       </Box>
+
 
       <Box
         sx={{
@@ -340,7 +400,7 @@ export default function ExampleCity() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Scrapyard Metro Manila is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Metro Manila, where you can make the stupidest
+              &nbsp;happening in Metro Manila, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
