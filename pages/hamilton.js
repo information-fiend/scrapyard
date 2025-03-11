@@ -27,15 +27,14 @@ import dynamic from 'next/dynamic'
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
   { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '1:00 PM', event: 'Start Hacking!' },
-  { time: '2:00 PM', event: 'Lunch' },
-  { time: '3:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
+  { time: '12:30 PM', event: 'Start Hacking!' },
+  { time: '1:00 PM', event: 'Lunch' },
+  { time: '2:00 PM', event: 'Workshop 1' },
   { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '5:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
+  { time: '6:00 PM', event: 'Dinner' },
+  { time: '7:00 PM', event: 'Lightning talks' },
   { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
+  { time: '7:00 AM', event: 'Breakfast' },
   { time: '10:30 AM', event: 'Demos!' },
   { time: '12:00 PM', event: 'Closing ceremony' }
 ]
@@ -179,6 +178,16 @@ export default function ExampleCity() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Hamilton - March&nbsp;15-16
             </Heading>
+            <Text
+              sx={{
+                fontFamily: 'p22-stanyan',
+                fontSize: ['0.8em', '1em'],
+                textAlign: 'center',
+                mt: 1
+              }}
+            >
+              CoMotion On King, 115 King St E, 3rd Floor
+            </Text>
           </Box>
         </Box>
         <Box

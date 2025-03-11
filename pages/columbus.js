@@ -10,21 +10,23 @@ import { transform } from 'motion'
 
 const schedule = [
   { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
-  { time: '10:45 PM', event: 'OPENING CEREMONY' },
+  { time: '10:30 PM', event: 'OPENING CEREMONY' },
   { time: '11:30 PM', event: 'TEAM FORMATION' },
-  { time: '12:15 PM', event: 'STARTER WORKSHOP*' },
-  { time: '12:15 PM', event: 'HACKING STARTS' },
-  { time: '12:15 PM', event: 'STARTER WORKSHOP*' },
+  { time: '11:45 PM', event: 'STARTER WORKSHOP*' },
+  { time: '11:45 PM', event: 'HACKING STARTS' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'STARTER WORKSHOP CONTINUES*' },
   { time: '3:00 PM', event: 'CYBERSECURITY WORKSHOP*' },
+  { time: '3:30 PM', event: 'DATA SCIENCE WORKSHOP*' },
   { time: '4:00 PM', event: 'SURPRISE EVENT & SNACKS' },
   { time: '6:00 PM', event: 'CLOSING FOR THE DAY' }
 ]
 
 const scheduleday2 = [
-  { time: '11:00 AM', event: 'DOORS OPEN/BREAKFAST' },
-  { time: '11:30 AM', event: 'FINAL HACKING BLOCK' },
+  { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
+  { time: '10:30 AM', event: 'FINAL HACKING BLOCK' },
+  { time: '11:00 AM', event: 'AUTONOMOUS ROBOTS TALK' },  
+  { time: '12:00 PM', event: 'PROJECT SUBMISSION HOW-TO' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'PROJECT DUE & HACKING ENDS' },
   { time: '2:15 PM', event: 'PROJECT EXPO AND VOTING' },
@@ -253,7 +255,7 @@ export default function Columbus() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              PAST Foundation - 1003 Kinnear Rd.
+              PAST Foundation - 1003 Kinnear Rd
             </Heading>
           </Box>
         </Box>
@@ -554,150 +556,156 @@ export default function Columbus() {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: ['90%', '70%'],
-            fontSize: '2em',
-            gap: '0.2em',
+            flexDirection: ['column', 'column', 'row'],
+            alignItems: ['center', 'center', 'flex-start'],
+            justifyContent: 'center',
+            gap: 4,
+            width: '100%',
+            fontSize: ['1.5em', '1.5em', '1.2em'],
             color: 'black',
-            my: 5,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: ['contain', 'contain', 'cover!important'],
-            p: 4,
-            borderRadius: 1,
-            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+            my: 5
           }}
         >
-          <Heading
-            as="h2"
+          <Box
             sx={{
-              fontSize: '1.5em',
-              fontFamily: 'moonblossom',
-              color: 'black',
-              textAlign: 'center',
-              paddingBottom: 50
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: ['90%', '70%', '45%'],
+              background: "url('/backgrounds/lined-paper.png')",
+              backgroundSize: ['contain', 'contain', 'cover!important'],
+              p: 4,
+              borderRadius: 1,
+              boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
             }}
           >
-            Day 1 (SATURDAY)
-          </Heading>
-
-          {schedule.map((item, i) => (
-            <div
-              style={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                marginBottom: '2.5rem'
+            <Heading
+              as="h2"
+              sx={{
+                fontSize: '1.5em',
+                fontFamily: 'moonblossom',
+                color: 'black',
+                textAlign: 'center',
+                paddingBottom: 50
               }}
-              key={i}
             >
-              <Heading
-                as="p"
-                sx={{
-                  display: 'inline',
-                  width: ['min-content', 'max-content'],
-                  fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+              Day 1 (SATURDAY)
+            </Heading>
+
+            {schedule.map((item, i) => (
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  alignItems: 'center',
+                  marginBottom: '1.5rem'
                 }}
+                key={i}
               >
-                {item.event}
-              </Heading>
-              <Box
-                sx={{
-                  mx: 2,
-                  transform: 'translateY(0.75rem)',
-                  borderWidth: 0,
-                  borderBottomWidth: '0.35rem',
-                  borderStyle: 'dotted',
-                  flexGrow: '1',
-                  display: 'inline',
-                  height: 1
-                }}
-              ></Box>
-              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
-            </div>
-          ))}
+                <Heading
+                  as="p"
+                  sx={{
+                    display: 'inline',
+                    width: ['min-content', 'max-content'],
+                    fontSize: '2rem',
+                    fontFamily: 'p22-stanyan'
+                  }}
+                >
+                  {item.event}
+                </Heading>
+                <Box
+                  sx={{
+                    mx: 2,
+                    transform: 'translateY(0.75rem)',
+                    borderWidth: 0,
+                    borderBottomWidth: '0.35rem',
+                    borderStyle: 'dotted',
+                    flexGrow: '1',
+                    display: 'inline',
+                    height: 1
+                  }}
+                ></Box>
+                <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+              </div>
+            ))}
 
-          <Heading
-            as="h2"
-            sx={{
-              fontSize: '0.8em',
-              fontFamily: 'moonblossom',
-              color: 'black',
-              textAlign: 'left',
-              paddingTop: 20
-            }}
-          >
-            *Optional event
-          </Heading>
-        </Box>
-
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: ['90%', '70%'],
-            fontSize: '2em',
-            gap: '0.2em',
-            color: 'black',
-            my: 5,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: ['contain', 'contain', 'cover!important'],
-            p: 4,
-            borderRadius: 1,
-            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
-          }}
-        >
-          <Heading
-            as="h2"
-            sx={{
-              fontSize: '1.5em',
-              fontFamily: 'moonblossom',
-              color: 'black',
-              textAlign: 'center',
-              paddingBottom: 50
-            }}
-          >
-            Day 2 (SUNDAY)
-          </Heading>
-
-          {scheduleday2.map((item, i) => (
-            <div
-              style={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                marginBottom: '2.5rem'
+            <Heading
+              as="h2"
+              sx={{
+                fontSize: '0.8em',
+                fontFamily: 'moonblossom',
+                color: 'black',
+                textAlign: 'left',
+                paddingTop: 20
               }}
-              key={i}
             >
-              <Heading
-                as="p"
-                sx={{
-                  display: 'inline',
-                  width: ['min-content', 'max-content'],
-                  fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+              *Optional event
+            </Heading>
+          </Box>
+
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: ['90%', '70%', '45%'],
+              background: "url('/backgrounds/lined-paper.png')",
+              backgroundSize: ['contain', 'contain', 'cover!important'],
+              p: 4,
+              borderRadius: 1,
+              boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontSize: '1.5em',
+                fontFamily: 'moonblossom',
+                color: 'black',
+                textAlign: 'center',
+                paddingBottom: 50
+              }}
+            >
+              Day 2 (SUNDAY)
+            </Heading>
+
+            {scheduleday2.map((item, i) => (
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  alignItems: 'center',
+                  marginBottom: '2rem'
                 }}
+                key={i}
               >
-                {item.event}
-              </Heading>
-              <Box
-                sx={{
-                  mx: 2,
-                  transform: 'translateY(0.75rem)',
-                  borderWidth: 0,
-                  borderBottomWidth: '0.35rem',
-                  borderStyle: 'dotted',
-                  flexGrow: '1',
-                  display: 'inline',
-                  height: 1
-                }}
-              ></Box>
-              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
-            </div>
-          ))}
+                <Heading
+                  as="p"
+                  sx={{
+                    display: 'inline',
+                    width: ['min-content', 'max-content'],
+                    fontSize: '2rem',
+                    fontFamily: 'p22-stanyan'
+                  }}
+                >
+                  {item.event}
+                </Heading>
+                <Box
+                  sx={{
+                    mx: 2,
+                    transform: 'translateY(0.75rem)',
+                    borderWidth: 0,
+                    borderBottomWidth: '0.35rem',
+                    borderStyle: 'dotted',
+                    flexGrow: '1',
+                    display: 'inline',
+                    height: 1
+                  }}
+                ></Box>
+                <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+              </div>
+            ))}
+          </Box>
         </Box>
       </Box>
 
@@ -1091,7 +1099,7 @@ export default function Columbus() {
                       fontSize: '1.5em',
                       fontFamily: 'moonblossom',
                       color: 'white',
-                      mt: 2
+                      mt: 2,
                     }}
                   >
                     PARTNERS
@@ -1115,7 +1123,7 @@ export default function Columbus() {
                         backgroundColor: '#d4caa3',
                         display: 'flex',
                         flexDirection: 'column',
-                        width: '200px',
+                        width: '170px',
                         alignItems: 'center',
                         padding: '20px',
                         transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
@@ -1154,6 +1162,7 @@ export default function Columbus() {
                 </div>
               </div>
             </div>
+
             <div
               style={{
                 width: '100%',
@@ -1163,7 +1172,7 @@ export default function Columbus() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '13rem',
-                marginTop: '10rem'
+                marginTop: '12rem'
               }}
             >
               <div
@@ -1204,10 +1213,9 @@ export default function Columbus() {
                     as="h2"
                     sx={{
                       textAlign: 'center',
-                      fontSize: '1.5em',
+                      fontSize: '1em',
                       fontFamily: 'moonblossom',
-                      color: 'white',
-                      mt: 2
+                      color: 'white'
                     }}
                   >
                     DIAMOND SPONSORS
@@ -1217,10 +1225,11 @@ export default function Columbus() {
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    gap: '20px',
+                    gap: '50px',
                     height: '200px',
-                    transform: 'scale(0.9)',
-                    justifyContent: 'center'
+                    transform: 'scale(0.7)',
+                    justifyContent: 'center',
+                    marginTop: -15
                   }}
                 >
                   {diamondSponsors.map((sponsor, i) => (
@@ -1231,7 +1240,7 @@ export default function Columbus() {
                         backgroundColor: '#86CEFA',
                         display: 'flex',
                         flexDirection: 'column',
-                        width: '15rem',
+                        width: '12.5rem',
                         alignItems: 'center',
                         padding: '20px',
                         transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
@@ -1325,7 +1334,8 @@ export default function Columbus() {
                     gap: '20px',
                     // height: '200px',
                     transform: 'scale(0.9)',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    marginTop: 10
                   }}
                 >
                   {goldSponsors.map((sponsor, i) => (
@@ -1431,7 +1441,8 @@ export default function Columbus() {
                     gap: '20px',
                     // height: '200px',
                     transform: 'scale(0.8)',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    marginTop: 5
                   }}
                 >
                   {silverSponsors.map((sponsor, i) => (
@@ -1442,7 +1453,7 @@ export default function Columbus() {
                         backgroundColor: '#c7c7c7',
                         display: 'flex',
                         flexDirection: 'column',
-                        width: '200px',
+                        width: 170,
                         alignItems: 'center',
                         padding: '20px',
                         transform: `rotate(${(Math.random() - 0.5) * 10}deg)`,
@@ -1535,11 +1546,11 @@ export default function Columbus() {
               }}
             />
             <Heading as="h3" mb={2}>
-              Meghana M.
+              Meghana M. (LEAD)
             </Heading>
             <Text sx={{ textAlign: 'center', fontSize: '2rem' }}>
-              Hey, I'm meghana. Love building awesome things with awesome
-              people. See you at scrapyard!
+              Hey, I'm Meghana. I love building awesome things with awesome
+              people. See you at Scrapyard!
             </Text>
           </Card>
 
@@ -1564,7 +1575,7 @@ export default function Columbus() {
               }}
             />
             <Heading as="h3" mb={2}>
-              Kristen O.
+              Kristen O. (CO-ORGANIZER)
             </Heading>
             <Text sx={{ textAlign: 'center', fontSize: '1.6rem' }}>
               Hello! I’m Kristen, I enjoy making fun websites and meeting new

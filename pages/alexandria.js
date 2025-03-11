@@ -16,7 +16,7 @@ If you have any questions, send a message to the #scrapyard channel on the Hack 
 
 P.S. Feel free to delete this comment block when you're done! 
 
-Note: To test your changes locally, use `yarn install` and `yarn dev`.
+Note: To test your changes locally, use `npm install` and `npm run dev`.
 */
 
 import Head from 'next/head'
@@ -24,16 +24,22 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
-const schedule = [
-  { time: '8:30 AM', event: 'Doors open' },
-  { time: '9:00 AM', event: 'Opening ceremony' },
-  { time: '9:30 AM', event: 'Hacking commences!' },
-  { time: '12:00 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Workshop 1' },
-  { time: '2:00 PM', event: 'Activity 1' },
-  { time: '3:00 PM', event: 'Workshop 2' },
-  { time: '6:45 PM', event: 'Demos!' },
-  { time: '8:30 PM', event: 'Closing ceremony' }
+const schedule1 = [
+    { event: 'Day 1' },
+    { time: '10:30 AM', event: 'Doors open' },
+    { time: '11:00 AM', event: 'Opening ceremony' },
+    { time: '12:00 PM', event: 'Start working on your project!' },
+    { time: '4:00 PM', event: 'Workshops' },
+    { time: '6:00 PM', event: 'Iftar' },
+    { time: '7:30 PM', event: 'Working on projects' },
+    { time: '9:00 PM', event: 'Projects Submission' }
+]
+  const schedule2 = [
+    { event: 'Day 2' },
+    { time: '2:30 PM', event: 'Doors open' },
+    { time: '3:00 PM', event: 'Project Showcase' },
+    { time: '6:00 PM', event: 'Iftar' },
+    { time: '7:00 PM', event: 'Judging & Closing ceremony' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -60,7 +66,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function Vancouver() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -75,7 +81,7 @@ export default function Vancouver() {
     >
       <Head>
         {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard Vancouver</title>
+        <title>Scrapyard Alexandria </title>
       </Head>
       <Flag />
       <Box
@@ -103,7 +109,7 @@ export default function Vancouver() {
 
               objectFit: 'contain'
             }}
-            src="/city/vancouver/scrapyardvancouver.png"
+            src="/city/alexandria/alexandria.png"
             alt="Scrapyard"
           />
         </Box>
@@ -143,17 +149,18 @@ export default function Vancouver() {
           <Box
             sx={{
               zIndex: 1,
+              width: 'max-content',
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
-              width: '85%',
+              width: '75%',
               position: 'relative',
-              zIndex: 20,
-              top: '-5%',
+              zIndex: 30,
+              top: '-15%',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              py: '2%',
+              py: '3%',
               filter: 'drop-shadow(5px 5px 5px #00000099)'
             }}
           >
@@ -164,45 +171,13 @@ export default function Vancouver() {
                 mx: '8%',
                 p: 0,
                 wordBreak: 'keep-all',
-                whiteSpace: 'pre-wrap',
-                textAlign: 'center',
-                fontSize: ['1.1em', '1.3em'],
-                fontWeight: 'bold'
+                whiteSpace: 'nowrap',
+                width: 'max-content',
+                fontSize: ['1.2em', '1.4em']
               }}
             >
-              MARCH 15, 2024 • 8:30AM - 7:30PM
-            </Heading>
-          </Box>
-          <Box
-            sx={{
-              zIndex: 1,
-              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100% 100%',
-              width: '65%',
-              position: 'relative',
-              zIndex: 20,
-              top: '-2%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              py: '2%',
-              filter: 'drop-shadow(5px 5px 5px #00000099)'
-            }}
-          >
-            <Heading
-              as="h2"
-              sx={{
-                fontFamily: 'p22-stanyan',
-                mx: '8%',
-                p: 0,
-                wordBreak: 'keep-all',
-                whiteSpace: 'pre-wrap',
-                textAlign: 'center',
-                fontSize: ['1em', '1.2em']
-              }}
-            >
-              VISST - 1490 W Broadway #200, Vancouver, BC
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Alexandria - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -252,8 +227,8 @@ export default function Vancouver() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recMCJhSzLBLhBitT"
+          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=alexandria"
           target="_blank"
         >
           <Box
@@ -335,78 +310,6 @@ export default function Vancouver() {
       >
         <Box
           sx={{
-            width: '100%',
-            textAlign: 'center',
-            mb: 4
-          }}
-        >
-          <Heading
-            as="h2"
-            sx={{
-              fontSize: '3em',
-              fontFamily: 'moonblossom',
-              fontWeight: 'bold',
-              color: 'black',
-              textAlign: 'center',
-              mb: 3,
-              position: 'relative',
-              display: 'inline-block'
-            }}
-          >
-            EVENT DETAILS
-            <Box
-              sx={{
-                position: 'absolute',
-                bottom: '-10px',
-                left: '0',
-                right: '0',
-                height: '4px',
-                background: '#337D78',
-                borderRadius: '2px'
-              }}
-            />
-          </Heading>
-
-          <Box
-            sx={{
-              maxWidth: '850px',
-              margin: '0 auto',
-              background: 'rgba(255, 255, 255, 0.8)',
-              padding: '25px',
-              borderRadius: '10px',
-              border: '2px solid #337D78',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-            }}
-          >
-            <Text
-              sx={{
-                fontSize: '1.4em',
-                lineHeight: '1.6',
-                fontFamily: 'p22-stanyan',
-                textAlign: 'center'
-              }}
-            >
-              Scrapyard Vancouver is a free 12-hour hackathon running on March
-              15th—a fun developer space for students to learn from mentors,
-              build exciting projects, compete for prizes, and make new
-              connections. We have mentors hosting educational workshops about
-              university and technology, sponsors providing students with fun
-              merchandise, and students from across the Lower Mainland
-              participating! We will be providing free lunch, snacks throughout
-              the day, educational workshops from experienced mentors, and
-              various prizes for participants.
-              <Box
-                as="span"
-                sx={{ display: 'block', fontWeight: 'bold', mt: 3 }}
-              >
-                Entry is free for all students. Registration deadline: Friday,
-                March 14th.
-              </Box>
-            </Text>
-          </Box>
-        </Box>
-        <Box
-          sx={{
             display: 'flex',
             flexDirection: ['column', 'column', 'row'],
             justifyContent: 'center',
@@ -432,7 +335,7 @@ export default function Vancouver() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard Vancouver?
+              What's Scrapyard Alexandria?
             </Heading>
             <p
               style={{
@@ -440,82 +343,77 @@ export default function Vancouver() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Vancouver is a free 12-hour hackathon for high school
-              students
+              Scrapyard Alexandria is a hackathon for high schoolers{' '}
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              in the Lower Mainland. Our event provides a professional
-              environment where students can learn from mentors, build exciting
-              projects, compete for prizes, and make new connections. We provide
-              free lunch, snacks throughout the day, educational workshops, and
-              a variety of prizes. Whether you're interested in technology,
-              looking to expand your skills, or just wanting to create something
-              innovative, Scrapyard Vancouver welcomes you!
+              happening in Alexandria , where you can make the stupidest
+              things you can think of! Anything, from a{' '}
+              <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
+                lamp that flashes faster the slower you type
+              </Link>
+              , to those ideas that you wouldn't dare to consider to be useful,
+              goes at Scrapyard. No matter your experience, Scrapyard Alexandria needs you and your scrappy ideas!
             </p>
           </Box>
+        </Box>
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            zIndex: 1,
+            display: ['none', 'none', 'block']
+          }}
+        >
+          <Image
+            src="/elements/doodles/arrow.svg"
+            sx={{ position: 'absolute', left: '5%', top: '0%' }}
+          />
+          <Image
+            src="/elements/doodles/pinkcircle.svg"
+            sx={{ position: 'absolute', left: '20%', top: '0%' }}
+          />
+          <Image
+            src="/elements/doodles/yellowcircle.svg"
+            sx={{ position: 'absolute', left: '8%', top: '70%' }}
+          />
+          <Image
+            src="/elements/doodles/bluesquiggle.svg"
+            sx={{ position: 'absolute', left: '8%', top: '84%' }}
+          />
+          <Image
+            src="/elements/doodles/yellowlines.svg"
+            sx={{ position: 'absolute', left: '37%', top: '80%' }}
+          />
+          <Image
+            src="/elements/doodles/bluecircle.svg"
+            sx={{ position: 'absolute', right: '30%', top: '78%' }}
+          />
+          <Image
+            src="/elements/doodles/pinksquiggle.svg"
+            sx={{ position: 'absolute', right: '10%', top: '80%' }}
+          />
+          <Image
+            src="/elements/doodles/bluedrops.svg"
+            sx={{ position: 'absolute', right: '10%', top: '0%' }}
+          />
         </Box>
       </Box>
 
       <Box
         sx={{
-          width: '100%',
-          alignItems: 'center',
+          width: '100vw',
+          background: "url('/backgrounds/ripped-paper-bottom.png')",
+          backgroundSize: 'cover',
+
           display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           flexDirection: 'column',
-          mb: 6
+
+          height: '17.03212647vw',
+          position: 'relative'
         }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            What is a Hackathon?
-          </Heading>
-        </Box>
-        <Box
-          sx={{
-            maxWidth: '800px',
-            background: 'rgba(255, 255, 255, 0.1)',
-            padding: '30px',
-            borderRadius: '10px',
-            border: '4px solid white',
-            mx: 4,
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
-          }}
-        >
-          <Text
-            sx={{
-              color: 'white',
-              fontSize: '1.5em',
-              fontFamily: 'p22-stanyan',
-              textAlign: 'center',
-              lineHeight: 1.6
-            }}
-          >
-            A hackathon is an event where people come together to collaborate &
-            work on tech projects. A panel of judges will pick the winning teams
-            & hand out prizes. However, the point of the hackathon itself is to
-            work together, learn new things & have an amazing time doing so!
-          </Text>
-        </Box>
-      </Box>
+      ></Box>
 
       <Box
         sx={{
@@ -525,206 +423,17 @@ export default function Vancouver() {
           flexDirection: 'column'
         }}
       >
-        <Heading
-          as="h2"
-          sx={{
-            fontSize: '3em',
-            fontFamily: 'moonblossom',
-            fontWeight: 'bold',
-            color: 'white',
-            textAlign: 'center',
-            mb: 3,
-            position: 'relative',
-            display: 'inline-block'
-          }}
-        >
-          VENUE
-          <Box
-            sx={{
-              position: 'absolute',
-              bottom: '-10px',
-              left: '0',
-              right: '0',
-              height: '4px',
-              background: 'white',
-              borderRadius: '2px'
-            }}
-          />
-        </Heading>
-
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: ['column', 'column', 'row'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 4,
-            width: '100%',
-            maxWidth: '1200px',
-            mb: 4,
-            padding: '30px',
-            background: 'rgba(255, 255, 255, 0.15)',
-            borderRadius: '15px',
-            backdropFilter: 'blur(5px)'
-          }}
-        >
-          <Box
-            sx={{
-              width: ['100%', '100%', '40%'],
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: 3
-            }}
-          >
-            <Text
-              sx={{
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '2em',
-                display: 'block',
-                mb: 1,
-                textAlign: 'center',
-                fontFamily: 'moonblossom'
-              }}
-            >
-              Vancouver Independent School for Science and Technology
-            </Text>
-
-            <Link
-              href="https://maps.app.goo.gl/5dp5ZR9grLQPXBkL9"
-              target="_blank"
-              sx={{
-                textDecoration: 'none',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                background: 'rgba(255, 255, 255, 0.2)',
-                padding: '15px 25px',
-                borderRadius: '10px',
-                border: '2px solid white',
-                transition: 'transform 0.2s ease, background 0.2s ease',
-                ':hover': {
-                  transform: 'scale(1.05)',
-                  background: 'rgba(255, 255, 255, 0.3)'
-                }
-              }}
-            >
-              <Box
-                sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}
-              >
-                <Text sx={{ fontSize: '2em' }}>📍</Text>
-                <Text
-                  sx={{
-                    color: '#ADD8E6',
-                    fontWeight: 'bold',
-                    fontSize: '1.8em',
-                    display: 'block'
-                  }}
-                >
-                  VISST
-                </Text>
-              </Box>
-              <Text
-                sx={{
-                  color: 'white',
-                  fontSize: '1.5em',
-                  fontFamily: 'moonblossom',
-                  display: 'block',
-                  textAlign: 'center'
-                }}
-              >
-                1490 W BROADWAY #200, VANCOUVER, BC
-              </Text>
-            </Link>
-
-            <Box
-              sx={{
-                background: 'rgba(255, 255, 255, 0.2)',
-                padding: '20px',
-                borderRadius: '10px',
-                border: '2px solid white',
-                mt: 3
-              }}
-            >
-              <Text
-                sx={{
-                  color: 'white',
-                  fontSize: ['1.2em', '1.3em', '1.4em'],
-                  fontFamily: '22-stanyan',
-                  textAlign: 'center',
-                  lineHeight: 1.4
-                }}
-              >
-                Take the{' '}
-                <span style={{ color: '#ADD8E6', fontWeight: 'bold' }}>
-                  Expo Line
-                </span>{' '}
-                to{' '}
-                <span style={{ color: '#ADD8E6', fontWeight: 'bold' }}>
-                  Commercial-Broadway Station
-                </span>{' '}
-                or the{' '}
-                <span style={{ color: '#ADD8E6', fontWeight: 'bold' }}>
-                  Canada Line
-                </span>{' '}
-                to{' '}
-                <span style={{ color: '#ADD8E6', fontWeight: 'bold' }}>
-                  Broadway-City Hall Station
-                </span>
-                . Then, take the{' '}
-                <span style={{ color: '#ADD8E6', fontWeight: 'bold' }}>
-                  UBC B-Line
-                </span>{' '}
-                to{' '}
-                <span style={{ color: '#ADD8E6', fontWeight: 'bold' }}>
-                  Broadway @ Granville
-                </span>
-                .
-              </Text>
-            </Box>
-          </Box>
-
-          <Box
-            sx={{
-              width: ['100%', '100%', '55%'],
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 3
-            }}
-          >
-            <Image
-              src="/city/vancouver/visstdoor.png"
-              alt="VISST Building Entrance"
-              sx={{
-                width: '100%',
-                borderRadius: '10px',
-                border: '3px solid white',
-                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)'
-              }}
-            />
-
-            <Image
-              src="/city/vancouver/visstlocal.png"
-              alt="Transit map showing route to venue"
-              sx={{
-                width: '100%',
-                borderRadius: '10px',
-                border: '3px solid white',
-                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)'
-              }}
-            />
-          </Box>
-        </Box>
-
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
             justifyContent: 'center',
-            margin: '8vh auto 0',
+            margin: '0vh',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             display: 'flex',
@@ -741,7 +450,7 @@ export default function Vancouver() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD Vancouver?
+            WHAT'S HAPPENING AT SCRAPYARD Alexandria?
           </Heading>
         </Box>
         <Heading
@@ -755,7 +464,8 @@ export default function Vancouver() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Vancouver is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Alexandria is a 2-day event - HERE'S THE ROUGH
+          SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -774,7 +484,7 @@ export default function Vancouver() {
             boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
-          {schedule.map((item, i) => (
+        {schedule1.map((item, i) => (
             <div
               style={{
                 display: 'flex',
@@ -809,6 +519,41 @@ export default function Vancouver() {
               <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
           ))}
+           {schedule2.map((item, i) => (
+                <div
+                style={{
+                display: 'flex',
+                width: '100%',
+                alignItems: 'center'
+                }}
+                key={i}
+                 >
+                <Heading
+                    as="p"
+                    sx={{
+                    display: 'inline',
+                    width: ['min-content', 'max-content'],
+                    fontSize: '2rem',
+                    fontFamily: 'p22-stanyan'
+                    }}
+                        >
+                    {item.event}
+                    </Heading>
+                    <Box
+                    sx={{
+                    mx: 2,
+                    transform: 'translateY(0.75rem)',
+                    borderWidth: 0,
+                    borderBottomWidth: '0.35rem',
+                    borderStyle: 'dotted',
+                    flexGrow: '1',
+                    display: 'inline',
+                    height: 1
+                          }}
+                     ></Box>
+                <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+                </div>
+            ))}
         </Box>
       </Box>
 
@@ -847,7 +592,7 @@ export default function Vancouver() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO Vancouver?
+            CAN'T MAKE IT TO Alexandria?
           </Heading>
         </Box>
         <Heading
@@ -859,7 +604,9 @@ export default function Vancouver() {
             textAlign: 'center',
             mx: '5vw'
           }}
-        >
+          >
+          The Address : 1 Mahmoud Salamah , Kom Ad Dakah Gharb, Al Attarin , Alexandria Governorate 5370051 
+          <span style={{ display: "block", marginTop: "15px" }}></span>
           THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
         </Heading>
         <Box
@@ -919,22 +666,33 @@ export default function Vancouver() {
         >
           {Object.entries({
             'Who can participate in Scrapyard?': (
-              <>All students grades 8-12 are welcome to come!</>
+              <>
+                All high-school & grade 9 students are welcome
+                to come! You don't have to be a member of the Hack Club
+                community or be a Hack Club leader.
+              </>
             ),
             'All this, for free?': (
               <>
-                Yep! 2 meals, tons of snacks, swag and good vibes are all
-                included! Plus, if you're joining us from afar,{' '}
+                Yep! Food, swag and good vibes are all included. Plus, if you’re
+                joining us from afar,{' '}
                 <Link href="https://gas.hackclub.com/">
-                  we'll cover the cost of gas or a bus / train ticket
+                  we’ll cover the cost of gas or a bus / train ticket
                 </Link>
                 .
               </>
             ),
-            'What do I need?': <>Your laptop, chargers, and an open mind!</>,
-            "I'm not good at coding. Can I still participate?": (
+            'What do I need?': (
               <>
-                Scrapyard is for creatives of all skill levels! We'll have
+                Your laptop, chargers, and an open mind! If you're going to an
+                overnight event, bring toiletries and sleeping bagstoo.
+                Additionally, if you plan to work on a hardware project, bring
+                the tools you'll need.
+              </>
+            ),
+            'I’m not good at coding. Can I still participate?': (
+              <>
+                This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
                 check out Hack Club Workshops.
@@ -944,7 +702,7 @@ export default function Vancouver() {
               <>
                 The scrappiest thing you can imagine –- jank is encouraged.
                 Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We'll have a bunch of resources and mentors to help
+                You name it! We’ll have a bunch of resources and mentors to help
                 you out.
               </>
             ),
@@ -970,12 +728,12 @@ export default function Vancouver() {
             ),
             'What if my parents are concerned?': (
               <>
-                We&apos;re here to help! Our parents guide will be released
-                soon, but they can reach out to us at{' '}
+                We’re here to help! Our parents guide will be released soon, but
+                they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:team@bcydc.ca">
+                <Link href="alexandria@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  team@bcydc.ca
+                  alexandria@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -983,12 +741,12 @@ export default function Vancouver() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the
-                #scrapyard-vancouver channel on the Hack Club slack or email us
-                at {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:team@bcydc.ca">
+                Contact us! Feel free to reach out to us in the #scrapyard-alexandria
+                channel on the Hack Club slack or email us at{' '}
+                {/* TODO: Change this email to your event's email */}
+                <Link href="alexandria@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  team@bcydc.ca
+                  alexandria@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -1040,8 +798,8 @@ export default function Vancouver() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recMCJhSzLBLhBitT"
+          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=alexandria"
           target="_blank"
         >
           <Box
@@ -1070,7 +828,8 @@ export default function Vancouver() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD Vancouver
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              SIGN UP FOR SCRAPYARD ALEXANDRIA
             </Heading>
           </Box>
         </Link>
@@ -1116,102 +875,6 @@ export default function Vancouver() {
           <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
           <Link href="https://hackclub.com/hackathons">Hackathons</Link>
         </Text>
-      </Box>
-      <Box
-        sx={{
-          width: '100%',
-          background:
-            "url('/backgrounds/cutting-mat.png'), linear-gradient(#337D78, #337D78)",
-          backgroundSize: '125%',
-          backgroundPosition: 'center',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          gap: '20px',
-          p: [4, 4, 5],
-          pt: 6,
-          position: 'relative'
-        }}
-      >
-        <Box
-          sx={{
-            background: 'rgba(0, 0, 0, 0.6)',
-            padding: '20px',
-            borderRadius: '10px',
-            mb: 3
-          }}
-        >
-          <Image
-            src="/city/vancouver/bcydc_logo.png"
-            alt="BCYDC Logo"
-            sx={{
-              width: '200px',
-              filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.2))'
-            }}
-          />
-        </Box>
-        <Text
-          sx={{
-            fontFamily: 'p22-stanyan',
-            textAlign: 'center',
-            fontSize: '1.5em',
-            maxWidth: '800px',
-            color: 'white'
-          }}
-        >
-          Scrapyard Vancouver is being organized by BCYDC. We are a collective
-          of over 300 high school students with a shared passion for computer
-          science, software development, robotics, and technology.
-        </Text>
-        <Box
-          sx={{
-            display: 'flex',
-            gap: '20px',
-            mt: 3
-          }}
-        >
-          <Link href="https://bcydc.ca/" target="_blank">
-            <Box
-              sx={{
-                background: '#285F5A',
-                color: 'white',
-                px: 4,
-                py: 2,
-                borderRadius: '5px',
-                textAlign: 'center',
-                cursor: 'pointer',
-                transition: 'transform 0.2s ease, background 0.2s ease',
-                ':hover': {
-                  background: '#1E4A46',
-                  transform: 'scale(1.05)'
-                }
-              }}
-            >
-              Visit Our Website
-            </Box>
-          </Link>
-          <Link href="https://discord.bcydc.ca" target="_blank">
-            <Box
-              sx={{
-                background: '#285F5A',
-                color: 'white',
-                px: 4,
-                py: 2,
-                borderRadius: '5px',
-                textAlign: 'center',
-                cursor: 'pointer',
-                transition: 'transform 0.2s ease, background 0.2s ease',
-                ':hover': {
-                  background: '#1E4A46',
-                  transform: 'scale(1.05)'
-                }
-              }}
-            >
-              Join Our Discord
-            </Box>
-          </Link>
-        </Box>
       </Box>
     </Box>
   )

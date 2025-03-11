@@ -153,7 +153,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Raspberry Pi, Cambridge - March&nbsp;15-16
+              Raspberry Pi, Cambridge - March&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -618,10 +618,9 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
+                Your laptop, chargers, and an open mind!
                 Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                the tools you'll need (except soldering irons and hot glue guns, which we'll provide).
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -662,14 +661,23 @@ export default function ExampleCity() {
             ),
             'What if my parents are concerned?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
+                We’re here to help! they can take a look at our <Link href="https://docs.google.com/document/d/179s8jCSdt1z2kLGslf5ShPb7VvDTsZ4I/edit?usp=sharing&ouid=103203442201930622890&rtpof=true&sd=true">
+                  parents guide
+                </Link>{' '}
+                or they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="cambridge@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   cambridge@scrapyard.hackclub.com
                 </Link>{' '}
-                for questions.
+                for questions. Our adult volunteers are DBS checked and 
+                have completed Safeguarding training.
+                For more information, check out Raspberry Pi's{' '}
+                {}
+                <Link href="https://www.raspberrypi.org/safeguarding/">
+                  {}
+                  safeguarding page
+                </Link>.
               </>
             ),
             'What if I have more questions?': (
