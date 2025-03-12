@@ -160,7 +160,7 @@ export default function Toronto() {
                 mt: 1
               }}
             >
-              Sunday 9pm to 9:30pm!
+              Sunday 9am to 9:30pm!
             </Text>
             <Text
               sx={{
