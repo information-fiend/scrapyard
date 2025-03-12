@@ -87,9 +87,9 @@ const sponsors = [
     link: 'https://scrum.works/'
   },
   {
-    name: 'Western Mechatronics',
-    logo: '/city/calgary/sponsors/mechatronics.png',
-    link: 'https://www.westernmech.ca/'
+    name: 'Averi',
+    logo: '/city/calgary/sponsors/averi.png',
+    link: 'https://www.averi.ai/'
   }
 ]
 
