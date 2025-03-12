@@ -72,7 +72,7 @@ export default function ExampleCity() {
     >
       <Head>
         {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard [Srinagar]</title>
+        <title>Scrapyard Srinagar</title>
       </Head>
       <Flag />
       <Box
@@ -168,7 +168,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [Srinagar] - March&nbsp;16
+              Srinagar - March&nbsp;16
             </Heading>
           </Box>
         </Box>
@@ -326,7 +326,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard [srinagar]?
+              What's Scrapyard Srinagar?
             </Heading>
             <p
               style={{
@@ -334,9 +334,9 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard [srinagar] is a hackathon for high schoolers
+              Scrapyard Srinagar is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in [srinagar], where you can make the stupidest
+              happening in Srinagar, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -344,7 +344,7 @@ export default function ExampleCity() {
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [srinagar] needs you and your scrappy ideas!
+              Srinagar needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -443,7 +443,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [srinagar]?
+            WHAT'S HAPPENING AT SCRAPYARD Srinagar?
           </Heading>
         </Box>
         <Heading
@@ -457,7 +457,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard [srinagar] is a [12h] event - HERE'S THE ROUGH
+          Scrapyard Srinagar is a 12h event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -550,7 +550,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO [srinagar]?
+            CAN'T MAKE IT TO Srinagar?
           </Heading>
         </Box>
         <Heading
@@ -785,7 +785,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [Srinagar]
+              SIGN UP FOR SCRAPYARD Srinagar
             </Heading>
           </Box>
         </Link>
