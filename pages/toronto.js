@@ -150,7 +150,7 @@ export default function Toronto() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Toronto - March&nbsp;15
+              Toronto - March&nbsp;16
             </Heading>
             <Text
               sx={{
@@ -464,7 +464,7 @@ export default function Toronto() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Toronto is a 12 or 24 Hour event - HERE'S THE ROUGH
+          Scrapyard Toronto is a 12 Hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
