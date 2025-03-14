@@ -116,11 +116,11 @@ const sponsors = [
     logo: '/city/calgary/sponsors/toronto.svg',
     link: 'https://scrapyard.hackclub.com/toronto'
   },
-  {
-    name: 'Shuflduf',
-    logo: '/city/calgary/sponsors/shuflduf.svg',
-    link: 'https://bsky.app/profile/shuflduf.xyz'
-  }
+  // {
+  //   name: 'Shuflduf',
+  //   logo: '/city/calgary/sponsors/shuflduf.svg',
+  //   link: 'https://bsky.app/profile/shuflduf.xyz'
+  // }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
