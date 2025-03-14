@@ -24,6 +24,7 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 import schedule from './schedule.json'
 
+
 const Flag = () => (
   <Link
     href="https://hackclub.com/"
@@ -162,43 +163,6 @@ export default function ExampleCity() {
             </Heading>
           </Box>
         </Box>
-        <Link
-          href="https://podium.hackclub.com/events/recdbANjyDbvTsxby/rank"
-          target="_blank"
-        >
-          <Box
-            sx={{
-              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100% 100%',
-              position: 'fixed',
-              right: ['2%'],
-              top: ['4%'],
-              filter: 'drop-shadow(5px 5px 5px #000)',
-              transition: 'transform 0.2s',
-              ':hover': {
-                transform: 'scale(1.1)'
-              },
-              zIndex: 30,
-              minWidth: '10em',
-              padding: '15px'
-            }}
-          >
-            <Heading
-              as="h2"
-              sx={{
-                fontFamily: 'moonblossom',
-                textAlign: 'center',
-                padding: ['2%', '8%'],
-                fontSize: ['1.2em', '1.4em'],
-                textTransform: 'inherit!important',
-                width: '100%'
-              }}
-            >
-              Vote&nbsp;Here!
-            </Heading>
-          </Box>
-        </Link>
         <Box
           sx={{
             position: 'absolute',
@@ -487,6 +451,87 @@ export default function ExampleCity() {
               <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
           ))}
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: ['column', 'column', 'row'],
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: ['20px', '20px', '70px'],
+            marginBottom: '50px'
+          }}
+        >
+          <Link
+            href="https://forms.hackclub.com/t/o3bRFL6waDus"
+            target="_blank"
+          >
+            <Box
+              sx={{
+                backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+                filter: 'drop-shadow(5px 5px 5px #000)',
+                transition: 'transform 0.2s',
+                ':hover': {
+                  transform: 'scale(1.1)'
+                },
+                zIndex: 20,
+                padding: 1,
+                my: 3
+              }}
+            >
+              <Heading
+                as="h2"
+                sx={{
+                  fontFamily: 'moonblossom',
+                  textAlign: 'center',
+                  margin: '8%',
+                  fontSize: ['1.2em', '1.4em'],
+                  textTransform: 'inherit!important',
+                  paddingY: ['15px', '0px']
+                }}
+              >
+                SIGN UP FOR a lighting talk
+              </Heading>
+            </Box>
+          </Link>
+          <Link
+            href="https://podium.hackclub.com/events/recdbANjyDbvTsxby/rank"
+            target="_blank"
+          >
+            <Box
+              sx={{
+                backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+                right: ['2%'],
+                top: ['4%'],
+                filter: 'drop-shadow(5px 5px 5px #000)',
+                transition: 'transform 0.2s',
+                ':hover': {
+                  transform: 'scale(1.1)'
+                },
+                zIndex: 30,
+                minWidth: '10em',
+                padding: '15px'
+              }}
+            >
+              <Heading
+                as="h2"
+                sx={{
+                  fontFamily: 'moonblossom',
+                  textAlign: 'center',
+                  padding: ['2%', '8%'],
+                  fontSize: ['1.2em', '1.4em'],
+                  textTransform: 'inherit!important',
+                  width: '100%'
+                }}
+              >
+                Vote&nbsp;Here!
+              </Heading>
+            </Box>
+          </Link>
         </Box>
       </Box>
 
