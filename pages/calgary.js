@@ -110,6 +110,16 @@ const sponsors = [
     name: '.xyz',
     logo: '/city/calgary/sponsors/xyz.svg',
     link: 'https://gen.xyz/'
+  },
+  {
+    name: 'Scrapyard Toronto',
+    logo: '/city/calgary/sponsors/toronto.svg',
+    link: 'https://scrapyard.hackclub.com/toronto'
+  },
+  {
+    name: 'Shuflduf',
+    logo: '/city/calgary/sponsors/shuflduf.svg',
+    link: 'https://bsky.app/profile/shuflduf.xyz'
   }
 ]
 
