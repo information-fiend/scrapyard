@@ -25,7 +25,7 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '08:00 AM', event: 'Doors open' },
+  { time: '08:30 AM', event: 'Doors open' },
   { time: '09:00 AM', event: 'Opening ceremony' },
   { time: '09:35 AM', event: 'Workshop 1' },
   { time: '11:30 AM', event: 'Workshop 2' },
@@ -222,6 +222,37 @@ export default function ExampleCity() {
           />
         </Box>
 
+         {/*Co-Presented by*/}
+          <Box
+            sx={{
+              background: "url('/elements/ripped-paper-strip.svg')",
+              backgroundSize: 'cover',
+              display: 'block',
+
+              width: 'min(550px, calc(100vw - 30px))',
+              filter: 'drop-shadow(5px 5px 5px #000000AA)',
+              position: 'relative',
+              zIndex: 20
+            }}
+          >
+            <Heading
+              as="h1"
+              sx={{
+                fontFamily: 'marykate',
+                textAlign: 'center',
+                marginBottom: '20px'
+              }}
+            >
+              Co-Presented By:
+            </Heading>
+
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Image src="\city\manila\globe.png" 
+              sx={{ maxWidth: '100%', 
+                    height:'auto' }}/>
+            </Box>
+          </Box>
+
         {/*Social Media Nav Bar*/}
 
         <Box
@@ -230,7 +261,7 @@ export default function ExampleCity() {
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
             position: 'fixed',
-            right: ['40%'],
+            right: ['50%'],
             top: ['4%'],
             filter: 'drop-shadow(5px 5px 5px #000)',
             transition: 'transform 0.2s',
@@ -472,6 +503,146 @@ export default function ExampleCity() {
         }}
       ></Box>
 
+      {/* Sponsors and Partners */}
+      <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        {/* Sponsors Section */}
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: 0,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              fontFamily: 'marykate',
+              color: 'rgb(238, 130, 128)',
+              textAlign: 'center',
+              marginBottom: '20px',
+            }}
+          >
+            SPONSOR
+          </Heading>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Image
+              src="\city\manila\brainsparks.png"
+              sx={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </Box>
+        </Box>
+
+        {/* Partners Section */}
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: 0,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              fontFamily: 'marykate',
+              color: 'rgb(143, 196, 233)',
+              textAlign: 'center',
+              marginBottom: '20px',
+            }}
+          >
+            PARTNERS
+          </Heading>
+
+          {/* Partner Logos in a Single Row */}
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap', 
+              justifyContent: 'space-evenly', 
+              width: '100%',
+              gap: '10px', 
+            }}
+          >
+           
+            <Box sx={{ flexBasis: '12%' }}> 
+              <Image
+                src="/city/manila/devcon-mnl.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/kakacomputerx.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/acadarena.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/pocky.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/edukasyon.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/siklab.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/maia.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/pintig.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+           
+      
+
+        
+
+    {/*Schedule*/}
       <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
@@ -588,7 +759,69 @@ export default function ExampleCity() {
         }}
       >
 
-        {/* SPONSOR SECTION */}
+      {/* Venue */}
+        <Box
+          sx={{
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            margin: '0vh',
+            padding: '0 5vw',
+          }}
+        >
+          {/* Title and Address Section */}
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%' }}>
+            <Heading
+              as="h1"
+              sx={{
+                fontSize: '1.5em',
+                fontFamily: 'moonblossom',
+                color: 'white',
+                textAlign: 'center',
+                mb: 2,
+              }}
+            >
+              VENUE
+            </Heading>
+
+            <Link
+              href="https://www.google.com.sg/maps/place/The+Globe+Tower,+32nd+St,+Taguig,+1634+Metro+Manila/@14.5537335,121.0499927,15z/data=!4m16!1m9!3m8!1s0x3397c8f14f959c5d:0xfec7f232b0da9cd9!2sThe+Globe+Tower,+32nd+St,+Taguig,+1634+Metro+Manila!3b1!8m2!3d14.5534542!4d121.0499036!10e5!16s%2Fg%2F1hhxrfg_l!3m5!1s0x3397c8f14f959c5d:0xfec7f232b0da9cd9!8m2!3d14.5534542!4d121.0499036!16s%2Fg%2F1hhxrfg_l?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D"
+              sx={{
+                textDecoration: 'none', 
+                fontSize: '1.1em',
+                fontFamily: 'moonblossom',
+                color: 'white',
+                textAlign: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                backdropFilter: 'blur(10px)',
+                padding: '5px 10px',
+                borderRadius: '5px',
+                marginBottom: 2,
+                transition: 'background-color 0.3s',
+                ':hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.4)', 
+                },
+              }}
+            >
+              The Globe Tower Radiate, 2F, The Globe Tower, BGC
+            </Link>
+          </Box>
+
+          {/* Venue Image Section */}
+          <Box
+            sx={{
+              width: '50%',
+              height: '100%',
+              backgroundImage: 'url(/city/manila/venue.png)', 
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              borderRadius: '10px', 
+            }}
+          />
+        </Box>
+
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
@@ -607,6 +840,7 @@ export default function ExampleCity() {
             alignItems: 'center'
           }}
         >
+          
           <Heading
             as="h1"
             sx={{
