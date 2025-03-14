@@ -90,6 +90,26 @@ const sponsors = [
     name: 'Averi',
     logo: '/city/calgary/sponsors/averi.png',
     link: 'https://www.averi.ai/'
+  },
+  {
+    name: 'TKS',
+    logo: '/city/calgary/sponsors/tks.png',
+    link: 'https://www.tks.world/'
+  },
+  {
+    name: 'DFRobot',
+    logo: '/city/calgary/sponsors/dfrobot.png',
+    link: 'https://www.dfrobot.com/'
+  },
+  {
+    name: 'Summit Squad',
+    logo: '/city/calgary/sponsors/summit_squad.png',
+    link: 'https://www.summitsquad.com/'
+  },
+  {
+    name: '.xyz',
+    logo: '/city/calgary/sponsors/xyz.svg',
+    link: 'https://gen.xyz/'
   }
 ]
 
