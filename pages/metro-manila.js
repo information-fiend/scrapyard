@@ -261,7 +261,7 @@ export default function ExampleCity() {
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
             position: 'fixed',
-            right: ['40%'],
+            right: ['50%'],
             top: ['4%'],
             filter: 'drop-shadow(5px 5px 5px #000)',
             transition: 'transform 0.2s',
