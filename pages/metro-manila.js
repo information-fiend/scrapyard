@@ -503,6 +503,146 @@ export default function ExampleCity() {
         }}
       ></Box>
 
+      {/* Sponsors and Partners */}
+      <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        {/* Sponsors Section */}
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: 0,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              fontFamily: 'marykate',
+              color: 'rgb(238, 130, 128)',
+              textAlign: 'center',
+              marginBottom: '20px',
+            }}
+          >
+            SPONSOR
+          </Heading>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Image
+              src="\city\manila\brainsparks.png"
+              sx={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </Box>
+        </Box>
+
+        {/* Partners Section */}
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: 0,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              fontFamily: 'marykate',
+              color: 'rgb(143, 196, 233)',
+              textAlign: 'center',
+              marginBottom: '20px',
+            }}
+          >
+            PARTNERS
+          </Heading>
+
+          {/* Partner Logos in a Single Row */}
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap', 
+              justifyContent: 'space-evenly', 
+              width: '100%',
+              gap: '10px', 
+            }}
+          >
+           
+            <Box sx={{ flexBasis: '12%' }}> 
+              <Image
+                src="/city/manila/devcon-mnl.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/kakacomputerx.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/acadarena.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/pocky.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/edukasyon.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/siklab.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/maia.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+            <Box sx={{ flexBasis: '12%' }}>
+              <Image
+                src="/city/manila/pintig.png"
+                sx={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+           
+      
+
+        
+
+    {/*Schedule*/}
       <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
@@ -619,7 +759,7 @@ export default function ExampleCity() {
         }}
       >
 
-        {/* Venue */}
+      {/* Venue */}
         <Box
           sx={{
             height: '30vh',
