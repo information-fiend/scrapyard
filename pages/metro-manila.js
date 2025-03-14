@@ -245,7 +245,7 @@ export default function ExampleCity() {
             >
               Co-Presented By:
             </Heading>
-            
+
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Image src="\city\manila\globe.png" 
               sx={{ maxWidth: '100%', 
@@ -674,7 +674,7 @@ export default function ExampleCity() {
             sx={{
               width: '50%',
               height: '100%',
-              backgroundImage: 'url(/city/manila/scrapyard-grp-pic.png)', 
+              backgroundImage: 'url(/city/manila/venue.png)', 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '10px', 
