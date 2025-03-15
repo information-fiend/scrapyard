@@ -4,7 +4,7 @@ import { FaExclamationTriangle } from 'react-icons/fa';
 // Schedule remains the same
 const scheduleDay1 = [
   {
-    time: '9:00 AM',
+    time: '10:00 AM',
     event: 'Doors Open & Check-In',
     icon: 'https://img.icons8.com/ios-filled/50/door.png',
   },
