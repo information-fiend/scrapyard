@@ -10,10 +10,10 @@ import { transform } from 'motion'
 
 const schedule = [
   { time: '10:00 AM', event: 'DOORS OPEN/BREAKFAST' },
-  { time: '10:30 PM', event: 'OPENING CEREMONY' },
-  { time: '11:00 PM', event: 'HACKING STARTS' },
-  { time: '11:00 PM', event: 'TEAM FORMATION' },
-  { time: '11:00 PM', event: 'STARTER WORKSHOP*' },
+  { time: '10:30 AM', event: 'OPENING CEREMONY' },
+  { time: '11:00 AM', event: 'HACKING STARTS' },
+  { time: '11:00 AM', event: 'TEAM FORMATION' },
+  { time: '11:00 AM', event: 'STARTER WORKSHOP*' },
   { time: '12:30 PM', event: 'CYBERSECURITY WORKSHOP*' },
   { time: '1:00 PM', event: 'LUNCH!' },
   { time: '2:00 PM', event: 'STARTER WORKSHOP CONTINUES*' },

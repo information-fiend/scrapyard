@@ -1,23 +1,30 @@
+'======== READ ME BEFORE EDITING ========'
+/*
+Hello! This is the template for the city pages.
+
+To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
+E.g. if your city is Tampa, rename the copy of this file to tampa.js
+
+Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
+You do not need to use this template exactly, feel free to customize it as much as you see fit.
+
+If you want to include additional assets, please add them under public/city/your-city-name.
+
+Make a PR and we'll review it as soon as we can!
+
+If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
+
+P.S. Feel free to delete this comment block when you're done! 
+
+Note: To test your changes locally, use `yarn install` and `yarn dev`.
+*/
+
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
+import schedule from './schedule.json'
 
-// TODO: Change this schedule to your own!
-const schedule = [
-  { time: '7:00–8:30 AM', event: 'Organizers setup' },
-  { time: '8:30–9:00 AM', event: 'Arrival & settling in' },
-  { time: '9:00–9:30 AM', event: 'Opening ceremony' },
-  { time: '9:30 AM–8:30 PM', event: 'Programming' },
-  {
-    time: '8:30–9:20 PM',
-    event:
-      "Presentation (One person stays at a project's station while others circulate to vote on their favorite project)"
-  },
-  { time: '9:20–9:30 PM', event: 'Closing ceremony' },
-  { time: '9:30–10:00 PM', event: 'Clean up & departure' }
-]
-
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
+const Map = dynamic(() => import('../../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -41,7 +48,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function Toronto() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -55,7 +62,7 @@ export default function Toronto() {
       }}
     >
       <Head>
-        <title>Scrapyard Toronto</title>
+        <title>Scrapyard BOSTON</title>
       </Head>
       <Flag />
       <Box
@@ -83,7 +90,7 @@ export default function Toronto() {
 
               objectFit: 'contain'
             }}
-            src="/city/toronto/Wordmark.svg"
+            src="/elements/wordmark.svg"
             alt="Scrapyard"
           />
         </Box>
@@ -147,47 +154,14 @@ export default function Toronto() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.1em', '1.3em']
               }}
             >
-              Toronto - March&nbsp;16
+              BOSTON - March&nbsp;15, {" "}
+              <Link href="https://www.google.com/maps/place/Microsoft+New+England+Research+and+Development+Center/@42.3614256,-71.0812092,1666m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e370a423d61825:0x58516248462c99eb!8m2!3d42.3614256!4d-71.0812092!16s%2Fg%2F1tfx5xkv!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D">
+                Microsoft NERD Center
+              </Link>
             </Heading>
-            <Text
-              sx={{
-                fontFamily: 'p22-stanyan',
-                fontSize: ['0.9em', '1.1em'],
-                textAlign: 'center',
-                mt: 1
-              }}
-            >
-              Sunday 9am to 9:30pm!
-            </Text>
-            <Text
-              sx={{
-                fontFamily: 'p22-stanyan',
-                fontSize: ['0.8em', '1em'],
-                textAlign: 'center',
-                mt: 1
-              }}
-            >
-              TMU, 245 Church Street, Toronto, ON M5B 2K3, Room ENG-LG14 (Enter
-              through the central entrance doors facing Church Street)
-            </Text>
-            <Text
-              sx={{
-                fontFamily: 'moonblossom',
-                mt: 2,
-                textAlign: 'center'
-              }}
-            >
-              <Link href="https://discord.gg/eMzU6vuZwj">Discord</Link>{' '}
-              <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-              <Link href="https://www.instagram.com/scrapyard_toronto/">
-                Instagram
-              </Link>{' '}
-              <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-              <Link href="https://hackclub.com/slack">Slack</Link>{' '}
-            </Text>
           </Box>
         </Box>
         <Box
@@ -236,7 +210,7 @@ export default function Toronto() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=toronto"
+          href="https://forms.hackclub.com/scrapyard-signup?event=boston"
           target="_blank"
         >
           <Box
@@ -273,6 +247,7 @@ export default function Toronto() {
           </Box>
         </Link>
       </Box>
+
       <Box
         sx={{
           width: '100%',
@@ -341,22 +316,22 @@ export default function Toronto() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Toronto?
+              What's Scrapyard Boston?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Toronto is a hackathon for high schoolers happening in
-              Toronto, where you can make the stupidest things you can think of!
-              Anything, from a{' '}
+              Scrapyard Boston is a hackathon for high schoolers
+              happening in Boston, where you can make the stupidest
+              things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Toronto
-              needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard
+              Boston needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -403,6 +378,7 @@ export default function Toronto() {
           />
         </Box>
       </Box>
+
       <Box
         sx={{
           width: '100vw',
@@ -418,6 +394,7 @@ export default function Toronto() {
           position: 'relative'
         }}
       ></Box>
+
       <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
@@ -452,9 +429,10 @@ export default function Toronto() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD TORONTO?
+            WHAT'S HAPPENING AT SCRAPYARD BOSTON?
           </Heading>
         </Box>
+
         <Heading
           as="h2"
           sx={{
@@ -464,7 +442,7 @@ export default function Toronto() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Toronto is a 12 Hour event - HERE'S THE ROUGH
+          Scrapyard Boston is a 12 hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -521,6 +499,7 @@ export default function Toronto() {
           ))}
         </Box>
       </Box>
+
       <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
@@ -555,7 +534,7 @@ export default function Toronto() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO TORONTO?
+            CAN'T MAKE IT TO BOSTON?
           </Heading>
         </Box>
         <Heading
@@ -584,6 +563,7 @@ export default function Toronto() {
           <Map />
         </Box>
       </Box>
+
       <Box
         sx={{
           width: '100%',
@@ -645,7 +625,7 @@ export default function Toronto() {
             'What do I need?': (
               <>
                 Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
+                overnight event, bring toiletries and sleeping bags too.
                 Additionally, if you plan to work on a hardware project, bring
                 the tools you'll need.
               </>
@@ -661,9 +641,9 @@ export default function Toronto() {
             'What can I make at Scrapyard?': (
               <>
                 The scrappiest thing you can imagine –- jank is encouraged.
-                Games?Apps?Websites?Programming languages?<em>Hardware?</em> You
-                name it! We’ll have a bunch of resources and mentors to help you
-                out.
+                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
+                You name it! We’ll have a bunch of resources and mentors to help
+                you out.
               </>
             ),
             'What has Hack Club done before?': (
@@ -690,20 +670,21 @@ export default function Toronto() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:toronto@scrapyard.hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  toronto@scrapyard.hackclub.com
+                <Link href="mailto:boston@scrapyard.hackclub.com">
+                  boston@scrapyard.hackclub.com 
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the
-                #scrapyard-toronto channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:toronto@scrapyard.hackclub.com">
-                  toronto@scrapyard.hackclub.com
+                Contact us! Feel free to reach out to us in the {' '}
+                <Link href="https://hackclub.slack.com/archives/C085VB6F0T1">
+                  #scrapyard-boston
+                </Link>{' '}
+                channel on the Hack Club slack or email us at{' '}
+                <Link href="mailto:boston@scrapyard.hackclub.com">
+                  boston@scrapyard.hackclub.com 
                 </Link>
                 .
               </>
@@ -754,307 +735,8 @@ export default function Toronto() {
             )
           })}
         </Grid>
-
-        <Box
-          sx={{
-            width: '90%',
-            maxWidth: '1200px',
-            mx: 'auto',
-            my: 6,
-            py: 4,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: 'cover',
-            borderRadius: 4,
-            boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              textAlign: 'center',
-              mb: 4,
-              fontSize: ['1.8em', '2.2em'],
-              position: 'relative',
-              pb: 2,
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                bottom: 0,
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '80px',
-                height: '3px',
-                backgroundColor: 'primary'
-              }
-            }}
-          >
-            Meet the Team
-          </Heading>
-          <Grid columns={[1, 2, 3]} gap={4} sx={{ px: [2, 3, 4] }}>
-            {[
-              {
-                name: 'Hajrah',
-                grade: '12th Grade',
-                highSchool: 'Lynn Rose College',
-                message:
-                  'I’m so excited to see all of your excited faces when presenting your projects and to see the very many cool ideas even though we’d all be sleep deprived.',
-                quote: 'Sometimes doing nothing is the best thing to do!!',
-                img: 'https://cdn.hack.pet/U084RT5K678/Untitled%20design.png'
-              },
-              {
-                name: 'Itai',
-                grade: '12th Grade',
-                highSchool: 'Maple High School',
-                message:
-                  'Looking forward to hypnotizing everyone into being an engineer for a day.',
-                quote: 'There is a house in New Orleans.',
-                img: 'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20211234.png'
-              },
-              {
-                name: 'Ritvik',
-                grade: '11th Grade',
-                highSchool: 'Victoria Park Collegiate Institute',
-                message: 'Looking forward to making friends!!',
-                quote:
-                  'There are 10 types of people in the world: those who understand binary and those who don’t.',
-                img: 'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20211256.png'
-              },
-              {
-                name: 'Ayaan',
-                grade: '12th Grade',
-                highSchool: 'White Oaks S.S.',
-                message:
-                  'Looking forward to seeing the most random stuff made :)',
-                quote: 'i am speed.',
-                img: 'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20212225.png'
-              },
-              {
-                name: 'Sunni',
-                grade: '10th Grade',
-                highSchool: 'Anderson CVI',
-                message: 'Looking forward to stupid sh*t and stupid prizes',
-                quote: 'if two wrongs dont make a right, try three.',
-                img: 'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20212240.png'
-              },
-              {
-                name: 'Annie',
-                grade: '10th Grade',
-                highSchool: 'Oakville Trafalgar High School',
-                message:
-                  'So excited to learn new things at the workshops and see all your cool projects!',
-                quote:
-                  ' If every porkchop were perfect, we wouldn’t have hot dogs.',
-                img: 'https://cdn.hack.pet/U084RT5K678/download%20(4).png'
-              }
-            ].map((member, i) => (
-              <Card
-                key={i}
-                sx={{
-                  p: 3,
-                  textAlign: 'center',
-                  border: '2px solid #000',
-                  background: 'white',
-                  boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
-                  transition: 'transform 0.2s ease',
-                  ':hover': {
-                    transform: 'translateY(-5px)'
-                  }
-                }}
-              >
-                <Image
-                  src={member.img}
-                  alt={member.name}
-                  sx={{
-                    width: '150px',
-                    height: '150px',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    borderRadius: '50%',
-                    mb: 3,
-                    border: '3px solid #000',
-                    mx: 'auto'
-                  }}
-                />
-                <Heading as="h3" sx={{ mt: 2, fontSize: '1.5em' }}>
-                  {member.name}
-                </Heading>
-                <Text sx={{ mt: 1, fontSize: '1.1em', color: '#555' }}>
-                  {member.grade} &bull; {member.highSchool}
-                </Text>
-                <br></br>
-                <Text sx={{ mt: 2, fontStyle: 'italic', fontSize: '1em' }}>
-                  "{member.quote}"
-                </Text>
-                <br></br>
-                <Text sx={{ mt: 2 }}>{member.message}</Text>
-              </Card>
-            ))}
-          </Grid>
-        </Box>
-
-        <Box
-          sx={{
-            width: '90%',
-            maxWidth: '1200px',
-            mx: 'auto',
-            my: 2,
-            py: 4,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: 'cover',
-            borderRadius: 4,
-            boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              textAlign: 'center',
-              mb: 4,
-              fontSize: ['1.8em', '2.2em'],
-              position: 'relative',
-              pb: 2,
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                bottom: 0,
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '80px',
-                height: '3px',
-                backgroundColor: 'primary'
-              }
-            }}
-          >
-            Sponsors
-          </Heading>
-          <Grid
-            gap={4}
-            sx={{
-              px: [2, 3, 4],
-              // On small screens show a single column; on larger screens use 2 columns (2fr/1fr)
-              gridTemplateColumns: ['1fr', '2fr 1fr']
-            }}
-          >
-            <Card
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                border: '2px solid #000',
-                background: 'white',
-                boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
-                transition: 'transform 0.2s ease',
-                ':hover': {
-                  transform: 'translateY(-3px)'
-                }
-              }}
-            >
-              <Image
-                src="https://cdn.hack.pet/U084RT5K678/image%20(4).png"
-                alt="Arista Networks"
-                sx={{
-                  width: '90%',
-                  height: 'auto',
-                  objectFit: 'contain',
-                  mx: 'auto',
-                  mb: 3
-                }}
-              />
-              <Heading as="h3" sx={{ fontSize: '1.7em', mb: 2 }}>
-                Arista Networks
-              </Heading>
-              <Text sx={{ fontSize: '1.1em' }}>
-                Arista Networks is an industry leader in data-driven, client to
-                cloud networking for large data center/AI, campus and routing
-                environments. Their award-winning platforms deliver
-                availability, agility, automation, analytics and security
-                through an advanced network operating stack.
-              </Text>
-            </Card>
-            <Card
-              sx={{
-                p: 3,
-                textAlign: 'center',
-                border: '2px solid #000',
-                background: 'white',
-                boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
-                transition: 'transform 0.2s ease',
-                ':hover': {
-                  transform: 'translateY(-3px)'
-                }
-              }}
-            >
-              <Image
-                src="https://cdn.hack.pet/U084RT5K678/system76-logo-open-source-tagliner4_1730474034__00841.webp"
-                alt="System76"
-                sx={{
-                  width: '70%',
-                  maxHeight: '140px',
-                  objectFit: 'contain',
-                  mx: 'auto',
-                  mb: 3
-                }}
-              />
-              <Heading as="h3" sx={{ fontSize: '1.5em', mb: 2 }}>
-                System76
-              </Heading>
-              <Text sx={{ fontSize: '1em' }}>
-                System76 builds powerful open source computers, keyboards, and
-                software, empowering creators, makers, and builders to unleash
-                their potential.
-              </Text>
-            </Card>
-          </Grid>
-
-          <Heading
-            as="h2"
-            sx={{
-              textAlign: 'center',
-              mt: 5,
-              mb: 3,
-              fontSize: ['1.4em', '1.6em']
-            }}
-          >
-            Our Partners
-          </Heading>
-          <Grid columns={[3, 4, 6]} gap={3} sx={{ px: [2, 3, 4] }}>
-            {[
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/278694a1ea294828eef8af0f8d2bf149921b6f6c_vueschool_logo_two_lines_white_bg__1_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/d7969da1d87bed74c9174d0a235307bd4f529ff5_image__5_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/393d615a4bdd2b724f5607e3337c630b73e3e2be_image__9_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/35d714f86028aea17dad967cc70887dfe0c5dad9_download__2___1_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/c999a19e5fa1e98d34cb01a31c870c758b329524_download__3_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/9d8b606916917690138ab77fc477400c1cfd1a89_image__8_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/9153306113d018c87d206fa57557ea842b4549c7_hetzner-logo__2___1_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/eccd6fe6bb17a69a954054518cb053a44369ce1b_xyz-logo-color.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/9d570f29ffe22aa71800cb981104a1bd37093296_white__1_.png',
-              'https://hc-cdn.hel1.your-objectstorage.com/s/v3/cc36a0d2d1d081b1a3bc4b534fad1bfde5d39be8_logo__1_.svg',
-              'https://cdn.hack.pet/U084RT5K678/Screenshot%202025-03-05%20214400.png',
-              'https://community.aws/img/AWS_logo_light.svg'
-            ].map((logo, i) => (
-              <Box
-                key={i}
-                sx={{
-                  border: '1px solid #ccc',
-                  p: 2,
-                  borderRadius: 2,
-                  background: 'white',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}
-              >
-                <Image
-                  src={logo}
-                  alt={`Sponsor ${i + 1}`}
-                  sx={{ width: '80%', height: 'auto' }}
-                />
-              </Box>
-            ))}
-          </Grid>
-        </Box>
-
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=toronto"
+          href="https://forms.hackclub.com/scrapyard-signup?event=boston"
           target="_blank"
         >
           <Box
@@ -1080,11 +762,10 @@ export default function Toronto() {
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px'],
-                lineHeight: 1.5
+                paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD TORONTO
+              SIGN UP FOR SCRAPYARD BOSTOn
             </Heading>
           </Box>
         </Link>
@@ -1123,12 +804,6 @@ export default function Toronto() {
           }}
         >
           <Link href="https://hackclub.com">Hack Club</Link>{' '}
-          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-          <Link href="https://discord.gg/eMzU6vuZwj">Discord</Link>{' '}
-          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-          <Link href="https://www.instagram.com/scrapyard_toronto/">
-            Instagram
-          </Link>{' '}
           <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
           <Link href="https://hackclub.com/slack">Slack</Link>{' '}
           <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
