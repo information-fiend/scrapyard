@@ -73,7 +73,7 @@ const sponsors = [
     {
     name: 'Cards Against Humanity',
     link: 'https://www.cardsagainsthumanity.com',
-    image: '/city/new-jersey/AoPS.png'
+    image: '/city/new-jersey/CAH_Logo.png'
   }
 ]
 
